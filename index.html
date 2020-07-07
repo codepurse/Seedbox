@@ -18,9 +18,21 @@
 </head>
 
 <body>
-    <div class="container-fluid h-100" style="background-color: #fafafa;">
-        <div class="container con" style="padding: 25px 15px;">
-            <nav class="navbar navbar-expand-md sticky-top">
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">HOME</a>
+        <a href="#">ABOUT</a>
+        <a href="#">PRODUCTS</a>
+        <a href="#">LOG-IN</a>
+        <a href="#">CONTACT</a>
+    </div>
+
+
+    <div class="container-fluid h-100" style="background-color: #fafafa;" >
+        
+        <div class="container con" style="padding: 25px 15px;" style="position: relative;">
+            <span style="font-size:30px;cursor:pointer;position: absolute;z-index: 1111111;color: #13C95C;display: none;" onclick="openNav()" class = "span">&#9776;</span>
+            <nav class="navbar navbar-expand-md">
                 <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -44,13 +56,15 @@
                 </div>
             </nav>
         </div>
-        <div class="container con h-100 conBody" style="padding: 20px 15px;background-color: #fafafa;">
+
+
+        <div class="container con h-100 conMainBody" style="padding: 20px 15px;background-color: #fafafa;">
 
             <div class="row align-items-center" style="height: 80vh;">
                 <div class="col-lg-6">
                     <img src="Image/money.png" class="img-fluid mx-auto d-flex" style="width: 80%">
                 </div>
-                <div class="col-lg-6 text-center">
+                <div class="col-lg-6 text-center conContent">
                     <p class="pTitle">Investing,</p>
                     <p class="pTitle" style="margin-top: -40px;">simplified.</p>
                     <p class="pSubtitle">Seedbox Philippines is a service that lets you invest in funds online,</p>
@@ -64,30 +78,41 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="box form-inline">
-                        <div class="divIcon" style="padding: 10px 20px;">
-                            <img src="Image/001-checklist.svg" style="width: 65px" class="img-fluid mx-auto d-flex">
-                            <p class="pBox">Sign-up</p>
+                        <div class="divIcon1 form-inline">
+                            <div class="divIcon" style="padding: 10px 20px;">
+                                <img src="Image/001-checklist.svg" style="width: 65px"
+                                    class="img-fluid mx-auto d-flex imgIcon">
+                                <p class="pBox">Sign-up</p>
+                            </div>
+                            <div class="divIcon" style="padding: 10px 20px;">
+                                <img src="Image/003-mountain.svg" style="width: 65px"
+                                    class="img-fluid mx-auto d-flex imgIcon">
+                                <p class="pBox">Know your goals</p>
+                            </div>
                         </div>
-                        <div class="divIcon" style="padding: 10px 20px;">
-                            <img src="Image/003-mountain.svg" style="width: 65px" class="img-fluid mx-auto d-flex">
-                            <p class="pBox">Know your goals</p>
+                        <div class="divIcon2 form-inline align-items-center">
+                            <div class="divIcon divIcon3 align-items-center" style="padding: 10px 20px;">
+                                <img src=" Image/004-agenda.svg" style="width: 80px"
+                                    class="img-fluid mx-auto d-flex imgIcon">
+                                <p class="pBox">Use the goal planner</p>
+                            </div>
+                            <div class="divIcon divIcon4" style="padding: 10px 20px;display: inline-block">
+                                <img src=" Image/005-save-money.svg" style="width: 55px"
+                                    class="img-fluid mx-auto d-flex imgIcon imgInvest">
+                                <p class="pBox">Invest</p>
+                            </div>
                         </div>
-                        <div class="divIcon" style="padding: 10px 20px;">
-                            <img src="Image/004-agenda.svg" style="width: 80px" class="img-fluid mx-auto d-flex">
-                            <p class="pBox">Use the goal planner</p>
-                        </div>
-                        <div class="divIcon" style="padding: 10px 20px;">
-                            <img src="Image/005-save-money.svg" style="width: 55px" class="img-fluid mx-auto d-flex">
-                            <p class="pBox">Invest</p>
-                        </div>
-                        <div class="divIcon" style="padding: 10px 20px;">
-                            <img src="Image/006-money.svg" style="width: 80px" class="img-fluid mx-auto d-flex">
-                            <p class="pBox">Build the habbit</p>
+                        <div class="divIcon3">
+                            <div class="divIconlast divIcon5" style="padding: 10px 20px;">
+                                <img src="Image/006-money.svg" style="width: 80px"
+                                    class="img-fluid mx-auto d-flex imgLast">
+                                <p class="pBox">Build the habbit</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row align-items-center" style="margin-top: 150px;padding-bottom: 100px;">
+            <div class="row align-items-center row1" style="margin-top: 150px;padding-bottom: 100px;">
                 <div class="col-lg-6 text-center">
                     <p class="pTitle">Seedbox</p>
                     <p class="pTitle" style="margin-top: -40px;">at work.</p>
@@ -95,7 +120,7 @@
                         with your office to set up an easy investment plan via payroll deduction. We can also offer
                         financial literacy seminars for your group.</p>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 colImage">
                     <img src="Image/Vector Illustration_Teamwork.png" class="img-fluid mx-auto d-flex"
                         style="width: 80%">
                 </div>
@@ -194,7 +219,7 @@
     });
     var x;
     $(".btnlogin").click(function () {
-        $(".conBody").css("filter", "blur(50px)");
+        $(".conMainBody").css("filter", "blur(50px)");
     });
 
     $(".pSignup").click(function () {
@@ -205,23 +230,23 @@
 
     $('#exampleModal').on('hidden.bs.modal', function () {
         if (x === 1) {
-            $(".conBody").css("filter", "blur(50px)");
+            $(".conMainBody").css("filter", "blur(50px)");
         }
         else {
-            $(".conBody").css("filter", "blur(0px)");
+            $(".conMainBody").css("filter", "blur(0px)");
         }
 
     })
 
     $('#exampleModal1').on('hidden.bs.modal', function () {
-        $(".conBody").css("filter", "blur(0px)");
+        $(".conMainBody").css("filter", "blur(0px)");
 
     })
 
 
     $('#exampleModal1').on('shown.bs.modal', function (e) {
         $("#exampleModal").modal('hide');
-        $(".conBody").css("filter", "blur(50px)");
+        $(".conMainBody").css("filter", "blur(50px)");
     })
 
 
@@ -232,5 +257,18 @@
 
 </script>
 
+<script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "220px";
+        $(".container").css("filter", "blur(5px)");
+        $(".container-fluid").css("filter", "blur(5px)");
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        $(".container").css("filter", "blur(0px)");
+        $(".container-fluid").css("filter", "blur(0px)");
+    }
+</script>
 
 </html>

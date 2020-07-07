@@ -11,6 +11,80 @@ body, html {
     }
 }
 
+@media only screen and (max-width: 480px) {
+    .span {
+        display: block !important;
+    }
+
+    .pTitle {
+        font-size: 2rem !important;
+        margin-top: -15px !important;
+    }
+
+    .navbar-toggler-icon {
+        display: none !important;
+    }
+
+    .conContent {
+        margin-top: -70px !important;
+    }
+
+    .conBody {
+        margin-top: -125px !important;
+    }
+
+    .box {
+        display: block !important;
+        width: auto !important;
+        background-color: transparent !important;
+        box-shadow: none !important;
+        padding: 0px !important;
+    }
+    .divIcon {
+        width: 43% !important;
+        background-color: white;
+        box-shadow: 5px 10px 30px #89898929;
+        border-radius: 10px;
+        margin: 0 auto;
+        padding: 30px;
+        margin: 10px;
+        max-height: 100px !important;
+        min-height: 100px !important;
+    }
+    .divIconlast {
+        background-color: white;
+        box-shadow: 5px 10px 30px #89898929;
+        border-radius: 10px;
+        margin: 0 auto;
+        padding: 30px;
+        margin: 10px;
+        max-height: 100px !important;
+        min-height: 100px !important;
+    }
+    .pBox {
+        font-size: 0.8rem !important;
+    }
+    .imgIcon {
+        width: 40% !important;
+    }
+    .imgInvest {
+        width: 29% !important;
+    }
+
+    .imgLast {
+        width: 20% !important;
+        margin-top: 5px !important;
+    }
+
+    .row1 {
+        margin-top: 70px !important;
+    }
+
+    .colImage {
+        margin-top: 40px !important;
+    }
+}
+
 @font-face {
     font-family: "Proxima Regular";
     src: url("../Fonts/ProximaNova-Regular.otf");
@@ -222,4 +296,41 @@ hr {
 
 .modal-backdrop {
     background-color: transparent !important;
- }
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: white;
+  box-shadow: 5px 10px 30px #89898929;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  border-top-right-radius: 18px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #1A1A1A;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #13C95C;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+

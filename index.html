@@ -23,15 +23,17 @@
         <a href="#">HOME</a>
         <a href="#">ABOUT</a>
         <a href="#">PRODUCTS</a>
-        <a href="#">LOG-IN</a>
+        <a href="#" data-toggle="modal" data-target="#exampleModal">LOG-IN</a>
         <a href="#">CONTACT</a>
     </div>
 
 
-    <div class="container-fluid h-100" style="background-color: #fafafa;" >
-        
+    <div class="container-fluid h-100" style="background-color: #fafafa;">
+
         <div class="container con" style="padding: 25px 15px;" style="position: relative;">
-            <span style="font-size:30px;cursor:pointer;position: absolute;z-index: 1111111;color: #13C95C;display: none;" onclick="openNav()" class = "span">&#9776;</span>
+            <span
+                style="font-size:30px;cursor:pointer;position: absolute;z-index: 1111111;color: #13C95C;display: none;"
+                onclick="openNav()" class="span">&#9776;</span>
             <nav class="navbar navbar-expand-md">
                 <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse">
                     <span class="navbar-toggler-icon"></span>
@@ -133,26 +135,27 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-body" style="border: 0px; margin: 0 auto">
-                    <img src="Image/leaf.png" class="img-fluid mx-auto d-flex" style="width: 80px;">
+                    <img src="Image/leaf.png" class="img-fluid mx-auto d-flex imgLeaf" style="width: 80px;">
                     <p class="pLogin">Log-in</p>
                     <input type="text" class="txtEmail" placeholder="e-mail">
-                    <input type="password" class="txtEmail" placeholder="password" style="margin-top: 20px;">
+                    <input type="password" class="txtEmail txtPassword" placeholder="password"
+                        style="margin-top: 20px;">
                     <div class="row align-items-center" style="margin-top: 15px;">
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-6">
                             <p class="pForgot">Forgot password?</p>
                         </div>
-                        <div class="col-lg-6">
+                        <div class="col-lg-6co-md-6 col-sm-6 col-6">
                             <input type="button" value="SUBMIT" class="btnSubmit">
                         </div>
                     </div>
                     <div class="row align-items-center">
-                        <div class="col-lg-5">
+                        <div class="col-lg-5 col-md-5 col-sm-5 col-5">
                             <hr>
                         </div>
-                        <div class="col-lg-2">
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-2">
                             <p class="pOr">or</p>
                         </div>
-                        <div class="col-lg-5">
+                        <div class="col-lg-5 col-md-5 col-sm-5 col-5">
                             <hr style="margin-left: -20%;">
                         </div>
                     </div>
@@ -186,13 +189,13 @@
                         </div>
                     </div>
                     <div class="row align-items-center">
-                        <div class="col-lg-5">
+                        <div class="col-lg-5 col-md-5 col-sm-5 col-5">
                             <hr>
                         </div>
-                        <div class="col-lg-2">
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-2">
                             <p class="pOr">or</p>
                         </div>
-                        <div class="col-lg-5">
+                        <div class="col-lg-5 col-md-5 col-sm-5 col-5">
                             <hr style="margin-left: -20%;">
                         </div>
                     </div>
@@ -251,7 +254,7 @@
 
 
     $('#exampleModal').on('shown.bs.modal', function (e) {
-
+        document.getElementById("mySidenav").style.width = "0";
         $("#exampleModal1").modal('hide');
     })
 

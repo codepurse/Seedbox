@@ -15,7 +15,6 @@ body, html {
     .span {
         display: block !important;
     }
-
     .pTitle {
         font-size: 2rem !important;
         margin-top: -15px !important;
@@ -82,6 +81,15 @@ body, html {
 
     .colImage {
         margin-top: 40px !important;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .imgLeaf {
+        width: 70px !important;
+    }
+    .txtEmail, .txtPassword {
+        width: 100% !important;
     }
 }
 

@@ -75,7 +75,12 @@
                             <p class="pMore1">More Information</p>
                         </Div>
                     </div>
-                    <div class="row rowStep">
+                    <div class="row rowStep" style="position: relative;">
+                        <div class="divWhite">
+                            <div class="divWhiteGreen">
+
+                            </div>
+                        </div>
                         <Div class="col-lg-12 colMore">
                             <p class="pMore">More Information</p>
                         </Div>
@@ -88,7 +93,7 @@
                             </div>
                         </div>
                         <div class="col-lg-9 col-md-9 col-sm-9 col-9 colStepText">
-                            <p class="pSteps">Personal Info > </p>
+                            <p class="pSteps" onclick="functionPersonal()">Personal Info > </p>
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-3 col">
                             <div class="divCircle" style="position: relative;">
@@ -99,7 +104,7 @@
                             </div>
                         </div>
                         <div class="col-lg-9 col-md-9 col-sm-9 col-9  colStepText">
-                            <p class="pSteps">Addres Information ></p>
+                            <p class="pSteps" onclick="functionAdrress()">Addres Information ></p>
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-3 col">
                             <div class="divCircle" style="position: relative;">
@@ -110,7 +115,7 @@
                             </div>
                         </div>
                         <div class="col-lg-9 col-md-9 col-sm-9 col-9  colStepText">
-                            <p class="pSteps">Professional Details ></p>
+                            <p class="pSteps" onclick="functionProfessional()">Professional Details ></p>
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-3 col">
                             <div class="divCircle" style="position: relative;">
@@ -121,7 +126,7 @@
                             </div>
                         </div>
                         <div class="col-lg-9 col-md-9 col-sm-9 col-9  colStepText">
-                            <p class="pSteps">FATCA ></p>
+                            <p class="pSteps" onclick="functionFatca()">FATCA ></p>
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-3 col">
                             <div class="divCircle" style="position: relative;">
@@ -132,7 +137,7 @@
                             </div>
                         </div>
                         <div class="col-lg-9 col-md-9 col-sm-9 col-9  colStepText">
-                            <p class="pSteps">CSA ></p>
+                            <p class="pSteps" onclick="functionCsa()">CSA ></p>
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-3 col">
                             <div class="divCircle" style="position: relative;">
@@ -143,7 +148,7 @@
                             </div>
                         </div>
                         <div class="col-lg-9 col-md-9 col-sm-9 col-9  colStepText">
-                            <p class="pSteps">PEP Declaration ></p>
+                            <p class="pSteps" onclick="functionPep()">PEP Declaration ></p>
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-3 col">
                             <div class="divCircle" style="position: relative;">
@@ -153,25 +158,42 @@
                             </div>
                         </div>
                         <div class="col-lg-9 col-md-9 col-sm-9 col-9  colStepText">
-                            <p class="pSteps">Settlement Information ></p>
+                            <p class="pSteps" onclick="functionSettlement()">Settlement Information ></p>
                         </div>
                     </div>
 
                 </div>
                 <div class="col-lg-5 col-md-5 colForm" style="margin: 0 auto;">
-                    <div class="divInfo">
-                        <form>
-                            <input required='' type='text' class="txtusername">
-                            <label alt='Full name' placeholder='Full name'></label>
-                        </form>
+                    <div class="divInfo divForm">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="selectdiv" style="margin-top:0px;">
+                                    <select autocomplete="off" class="select2 ">
+                                        <option value="" disabled selected>Suffix
+                                        </option>
+                                        <option>Sr</option>
+                                        <option>Jr</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-8">
+                                <form>
+                                    <input required='' type='text' class="txtusername">
+                                    <label alt='Full name' placeholder='Full name'></label>
+                                </form>
+                            </div>
+                        </div>
                         <form>
                             <input required='' type='text' class="txtusername">
                             <label alt='Mobile Number' placeholder='Mobile Number'></label>
                         </form>
                         <form>
-                            <input required='' type='text' class="txtusername">
+                            <input required='' type='text' class="txtusername txtEmail">
                             <label alt='E-mail' placeholder='E-mail'></label>
                         </form>
+                        <p class="pError pErrorEmail error" style="margin-top:-10px;">Error! Please put a valid email.
+                        </p>
+                        <p class="pError pErrorEmail success">Your email in valid.</p>
                         <form>
                             <input required='' type='text' class="txtusername">
                             <label alt='Referral Agent Code' placeholder='Referral Agent Code'></label>
@@ -231,6 +253,19 @@
                                                 <option>16</option>
                                                 <option>17</option>
                                                 <option>18</option>
+                                                <option>19</option>
+                                                <option>20</option>
+                                                <option>21</option>
+                                                <option>22</option>
+                                                <option>23</option>
+                                                <option>24</option>
+                                                <option>25</option>
+                                                <option>26</option>
+                                                <option>27</option>
+                                                <option>28</option>
+                                                <option>29</option>
+                                                <option>30</option>
+                                                <option>31</option>
                                             </select>
                                         </div>
                                     </div>
@@ -255,7 +290,7 @@
                             </div>
                         </div>
                         <div class="col-lg-12">
-                            <p class="pError">You must be at least 18 years of age to sign-up.</p>
+                            <p class="pError pErrorAge">Your email in valid.</p>
                         </div>
                         <form style="margin-top: 5px;">
                             <input required='' type='text' class="txtusername">
@@ -287,7 +322,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="divAdrress" style="display: none;">
+                    <div class="divAdrress divForm" style="display: none;">
                         <div class="row">
                             <div class="col-lg-5 col-md-5 col-sm-5 col-5">
                                 <div class="selectdiv" style="margin-top:0px;">
@@ -299,7 +334,7 @@
                                         <option>TIN ID</option>
                                         <option>Pag-Ibig ID</option>
                                         <option>Driver license (Pro & Non-Pro)</option>
-                                        <option>Philhealth ID</option>
+                                        <option>Philhealth</option>
                                         <option>PRC ID</option>
                                         <option>Postal ID</option>
                                         <option>Voter's ID</option>
@@ -348,32 +383,32 @@
                             </div>
                             <div class="col-lg-12" style="margin-top: 10px;">
                                 <form>
-                                    <input required='' type='text' class="txtusername">
+                                    <input required='' type='text' class="txtusername txtCurrentAdd1">
                                     <label alt='Current Address Line 1' placeholder='Current Address Line 1'></label>
                                 </form>
                             </div>
                             <div class="col-lg-12">
                                 <form>
-                                    <input required='' type='text' class="txtusername">
+                                    <input required='' type='text' class="txtusername txtCurrentAdd2">
                                     <label alt='Current Address Line 2' placeholder='Current Address Line 2'></label>
                                 </form>
                             </div>
 
                             <div class="col-lg-6">
                                 <form>
-                                    <input required='' type='text' class="txtusername">
+                                    <input required='' type='text' class="txtusername txtCity">
                                     <label alt='City' placeholder='City'></label>
                                 </form>
                             </div>
                             <div class="col-lg-6">
                                 <form>
-                                    <input required='' type='text' class="txtusername">
+                                    <input required='' type='text' class="txtusername txtRegion">
                                     <label alt='Region' placeholder='Region'></label>
                                 </form>
                             </div>
                             <div class="col-lg-12">
                                 <form>
-                                    <input required='' type='text' class="txtusername">
+                                    <input required='' type='text' class="txtusername txtCountry">
                                     <label alt='Country' placeholder='Country'></label>
                                 </form>
                             </div>
@@ -385,10 +420,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="divAdrress1" style="display: none;">
+                    <div class="divAdrress1 divForm" style="display: none;">
                         <div class="row">
                             <div class="col-lg-6">
-                                <p class="pInfoTitle" style="margin-top: 0px;">Permanent Address</p>
+                                <p class="pInfoTitle" style="margin-top: 0px;">Permanent Address<span><img
+                                            src="Image/down-arrow.png" onclick="functionShowAdd()"
+                                            class="img-fluid imgArrow"
+                                            style="width: 15px;margin-left: 20px;cursor:pointer;"></span></p>
                             </div>
                             <div class="col-lg-6">
                                 <input class="inp-cbx" id="cbx" type="checkbox" style="display: none" />
@@ -403,32 +441,32 @@
                         <div class="row" style="margin-top: 15px;">
                             <div class="col-lg-12 colAdd">
                                 <form>
-                                    <input required='' type='text' class="txtusername">
-                                    <label alt='Permanent Address Line 1' placeholder='Addres'></label>
+                                    <input required='' type='text' class="txtusername txtAdd txtPermaAdd1">
+                                    <label class="lblAdd" alt='Permanent Address Line 1' placeholder='Addres'></label>
                                 </form>
                             </div>
                             <div class="col-lg-12 colAdd">
                                 <form>
-                                    <input required='' type='text' class="txtusername">
-                                    <label alt='Permanent Address Line 2' placeholder='Addres'></label>
+                                    <input required='' type='text' class="txtusername txtAdd txtPermaAdd2">
+                                    <label class="lblAdd" alt='Permanent Address Line 2' placeholder='Addres'></label>
                                 </form>
                             </div>
                             <div class="col-lg-6 colAdd">
                                 <form>
-                                    <input required='' type='text' class="txtusername">
-                                    <label alt='City' placeholder='City'></label>
+                                    <input required='' type='text' class="txtusername txtAdd txtPermaCity">
+                                    <label class="lblAdd" alt='City' placeholder='City'></label>
                                 </form>
                             </div>
                             <div class="col-lg-6 colAdd">
                                 <form>
-                                    <input required='' type='text' class="txtusername">
-                                    <label alt='Region' placeholder='Region'></label>
+                                    <input required='' type='text' class="txtusername txtAdd txtPermaRegion">
+                                    <label class="lblAdd" alt='Region' placeholder='Region'></label>
                                 </form>
                             </div>
                             <div class="col-lg-12 colAdd">
                                 <form>
-                                    <input required='' type='text' class="txtusername">
-                                    <label alt='Country' placeholder='Country'></label>
+                                    <input required='' type='text' class="txtusername txtAdd txtPermaCountry">
+                                    <label class="lblAdd" alt='Country' placeholder='Country'></label>
                                 </form>
                             </div>
                         </div>
@@ -480,7 +518,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="divFinancial" style="display: none;">
+                    <div class="divFinancial divForm" style="display: none;">
                         <div class="row">
                             <div class="col-lg-12">
                                 <p class="pInfoTitle" style="margin-top: 0px;">Financial Profile</p>
@@ -518,7 +556,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="divFatca" style="display: none;">
+                    <div class="divFatca divForm" style="display: none;">
                         <div class="row">
                             <div class="col-lg-12">
                                 <p class="pInfoTitle" style="margin-top: 0px;">FATCA</p>
@@ -601,7 +639,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="divFatca1" style="display: none;">
+                    <div class="divFatca1 divForm" style="display: none;">
                         <div class="row">
                             <div class="col-lg-12" style="margin-top: 10px;">
                                 <p class="pInfoTitle" style="margin-top: 0px;margin-bottom: 15px;">FATCA</p>
@@ -646,7 +684,7 @@
                             </div>
                         </div>
                     </div>
-                    <Div class="divCsa" style="display: none;">
+                    <Div class="divCsa divForm" style="display: none;">
                         <div class="row">
                             <div class="col-lg-12" style="margin-top: 10px;">
                                 <p class="pInfoTitle" style="margin-top: 0px;margin-bottom: 15px;">CSA</p>
@@ -716,7 +754,7 @@
                             </div>
                         </div>
                     </Div>
-                    <div class="divPep" style="display: none;">
+                    <div class="divPep divForm" style="display: none;">
                         <div class="row">
                             <div class="col-lg-12" style="margin-top: 10px;">
                                 <p class="pInfoTitle" style="margin-top: 0px;margin-bottom: 15px;">Pep Declaration</p>
@@ -790,8 +828,123 @@
 
 <script>
     var step = 0;
+    var show = 0;
+    function functionShowAdd() {
+        if (show === 0) {
+            $(".colAdd").css("display", "none");
+            $(".imgArrow").css("transform", "rotate(180deg)");
 
+            show = 1;
+        }
+        else {
+            $(".colAdd").css("display", "block");
+            $(".imgArrow").css("transform", "rotate(360deg)");
+            show = 0;
+        }
+    }
 
+    $(function () {
+
+        // var regExp = /^\w*(\.\w*)?@\w*\.[a-z]+(\.[a-z]+)?$/;
+        var regExp = /^([\w\.\+]{1,})([^\W])(@)([\w]{1,})(\.[\w]{1,})+$/;
+
+        $('.txtEmail').on('keyup', function () {
+            $('.pErrorEmail').hide();
+            regExp.test($(this).val()) ? $('.pErrorEmail.success').hide() : $('.pErrorEmail.error').show();
+        });
+
+    });
+
+    function functionPersonal() {
+        $(".divAdrress").css("display", "none");
+        $(".divForm").css("display", "none");
+        $(".divAdrress").removeClass("animate__fadeOut")
+        $(".divAdrress").addClass("animate__animated  animate__fadeOut")
+        $(".divAdrress").addClass("animate__animated  animate__fadeOut")
+        $(".divInfo").css("display", "block");
+        $(".divInfo").removeClass("animate__fadeOut")
+        $(".divInfo").addClass("animate__animated  animate__fadeIn");
+        $(".divWhite").css("top", "58px");
+        step = 0;
+    }
+
+    function functionAdrress() {
+        $(".pMore").text("Address Information");
+        $(".divForm").css("display", "none");
+        $(".divAdrress1").removeClass("animate__animated  animate__fadeOut animate__fadeIn");
+        $(".divAdrress1").removeClass("animate__animated  animate__fadeOut animate__fadeIn");
+        $(".divAdrress").css("display", "none");
+        $(".divAdrress").addClass("animate__animated  animate__fadeOut")
+        $(".divAdrress1").css("display", "block");
+        $(".divAdrress1").addClass("animate__animated  animate__fadeIn");
+        $(".divWhite").css("top", "125px");
+        step = 2;
+    }
+
+    function functionProfessional() {
+        $(".pMore").text("Financial Information");
+        $(".divForm").css("display", "none");
+        $(".divFinancial").removeClass("animate__animated  animate__fadeOut animate__fadeIn");
+        $(".divFinancial").removeClass("animate__animated  animate__fadeOut animate__fadeIn");
+        $(".divAdrress1").css("display", "none");
+        $(".divAdrress1").addClass("animate__animated  animate__fadeOut")
+        $(".divFinancial").css("display", "block");
+        $(".divFinancial").addClass("animate__animated  animate__fadeIn");
+        $(".divWhite").css("top", "195px");
+        step = 3;
+    }
+
+    function functionFatca() {
+        $(".pMore").text("FATCA");
+        $(".divForm").css("display", "none");
+        $(".divFatca").removeClass("animate__animated  animate__fadeOut animate__fadeIn");
+        $(".divFatca").removeClass("animate__animated  animate__fadeOut animate__fadeIn");
+        $(".divFinancial").css("display", "none");
+        $(".divFinancial").addClass("animate__animated  animate__fadeOut")
+        $(".divFatca").css("display", "block");
+        $(".divFatca").addClass("animate__animated  animate__fadeIn");
+        $(".divWhite").css("top", "260px");
+        step = 4;
+    }
+
+    function functionCsa() {
+        $(".pMore").text("CSA");
+        $(".divForm").css("display", "none");
+        $(".divCsa").removeClass("animate__animated  animate__fadeOut animate__fadeIn");
+        $(".divCsa").removeClass("animate__animated  animate__fadeOut animate__fadeIn");
+        $(".divFatca1").css("display", "none");
+        $(".divFatca1").addClass("animate__animated  animate__fadeOut")
+        $(".divCsa").css("display", "block");
+        $(".divCsa").addClass("animate__animated  animate__fadeIn");
+        $(".divWhite").css("top", "330px");
+        step = 6;
+    }
+
+    function functionPep() {
+        $(".pMore").text("PEP / Settlement");
+        $(".divForm").css("display", "none");
+        $(".divPep").removeClass("animate__animated  animate__fadeOut animate__fadeIn");
+        $(".divCsa").removeClass("animate__animated  animate__fadeOut animate__fadeIn");
+        $(".divCsa").css("display", "none");
+        $(".divCsa").addClass("animate__animated  animate__fadeOut")
+        $(".divPep").css("display", "block");
+        $(".divPep").addClass("animate__animated  animate__fadeIn");
+        $(".divWhite").css("top", "400px");
+        step = 7;
+    }
+
+    function functionSettlement() {
+        $(".pMore").text("PEP / Settlement");
+        $(".divForm").css("display", "none");
+        $(".divPep").removeClass("animate__animated  animate__fadeOut animate__fadeIn");
+        $(".divCsa").removeClass("animate__animated  animate__fadeOut animate__fadeIn");
+        $(".divCsa").css("display", "none");
+        $(".divCsa").addClass("animate__animated  animate__fadeOut")
+        $(".divPep").css("display", "block");
+        $(".divPep").addClass("animate__animated  animate__fadeIn");
+        $(".divWhite").css("top", "470px");
+        step = 7;
+    }
 
 
     $(document).ready(function () {
@@ -807,6 +960,32 @@
                 $('#txtIdNumber').attr('maxlength', '14');
                 addHyphenPagibig(this);
             }
+            if ($("#IdType").val() === "PRC ID") {
+                $('#txtIdNumber').attr('maxlength', '7');
+            }
+            if ($("#IdType").val() === "OFW e-Card") {
+                $('#txtIdNumber').attr('maxlength', '13');
+            }
+            if ($("#IdType").val() === "Philhealth") {
+                $('#txtIdNumber').attr('maxlength', '14');
+                $text = $('#txtIdNumber');
+                if ($text.val().length === 2) {
+                    $text.val($text.val() + '-');
+                }
+                else if ($text.val().length === 12) {
+                    $text.val($text.val() + '-');
+                }
+            }
+            if ($("#IdType").val() === "Driver license (Pro & Non-Pro)") {
+                $('#txtIdNumber').attr('maxlength', '13');
+                $text = $('#txtIdNumber');
+                if ($text.val().length === 3) {
+                    $text.val($text.val() + '-');
+                }
+                else if ($text.val().length === 5) {
+                    $text.val($text.val() + '-');
+                }
+            }
             if ($("#IdType").val() === "SSS ID") {
                 $('#txtIdNumber').attr('maxlength', '13');
                 $text = $('#txtIdNumber');
@@ -821,6 +1000,11 @@
         });
     });
 
+    $(document).ready(function () {
+        $('#IdType').change(function (event) {
+            $("#txtIdNumber").val("");
+        });
+    });
 
 
 
@@ -828,6 +1012,12 @@
 
 
 
+
+    $(document).ready(function () {
+        $('.txtusername').keyup(function (event) {
+            $(this).css("border-color", "green");
+        });
+    });
 
 
 
@@ -853,9 +1043,11 @@
 
     $("#cbx").change(function (event) {
         if (this.checked) {
-            $(".colAdd").css("display", "none");
+            $(".txtAdd").attr("disabled", "disabled");
+            $(".txtAdd").addClass("disabledText");
         } else {
-            $(".colAdd").css("display", "block");
+            $(".txtAdd").removeAttr('disabled');
+            $(".txtAdd").removeClass("disabledText");
         }
     });
 
@@ -874,6 +1066,7 @@
             $(".divCsa").css("display", "block");
             $(".divCsa").removeClass("animate__fadeOut")
             $(".divCsa").addClass("animate__animated  animate__fadeIn");
+            $(".divWhite").css("top", "330px");
             step = 6;
         }
         else if (step === 6) {
@@ -885,6 +1078,7 @@
             $(".divFatca1").css("display", "block");
             $(".divFatca1").removeClass("animate__fadeOut")
             $(".divFatca1").addClass("animate__animated  animate__fadeIn");
+            $(".divWhite").css("top", "260px");
             step = 5;
         }
         else if (step === 5) {
@@ -896,6 +1090,7 @@
             $(".divFatca").css("display", "block");
             $(".divFatca").removeClass("animate__fadeOut")
             $(".divFatca").addClass("animate__animated  animate__fadeIn");
+
             step = 4;
         }
         else if (step === 4) {
@@ -907,6 +1102,7 @@
             $(".divFinancial").css("display", "block");
             $(".divFinancial").removeClass("animate__fadeOut")
             $(".divFinancial").addClass("animate__animated  animate__fadeIn");
+            $(".divWhite").css("top", "195px");
             step = 3;
         }
         else if (step === 3) {
@@ -918,6 +1114,7 @@
             $(".divAdrress1").css("display", "block");
             $(".divAdrress1").removeClass("animate__fadeOut")
             $(".divAdrress1").addClass("animate__animated  animate__fadeIn");
+            $(".divWhite").css("top", "125px");
             step = 2;
         }
         else if (step === 2) {
@@ -929,6 +1126,7 @@
             $(".divAdrress").css("display", "block");
             $(".divAdrress").removeClass("animate__fadeOut")
             $(".divAdrress").addClass("animate__animated  animate__fadeIn");
+            $(".divWhite").css("top", "58px");
             step = 1;
         }
         else if (step === 1) {
@@ -939,6 +1137,7 @@
             $(".divInfo").css("display", "block");
             $(".divInfo").removeClass("animate__fadeOut")
             $(".divInfo").addClass("animate__animated  animate__fadeIn");
+            $(".divWhite").css("top", "58px");
             step = 0;
         }
     })
@@ -956,10 +1155,10 @@
                 var age = parseInt(dayDiff);
 
                 if (age < 18) {
-                    $(".pError").css("display", "block");
+                    $(".pErrorAge").css("display", "block");
                 }
                 else {
-                    $(".pError").css("display", "none");
+                    $(".pErrorAge").css("display", "none");
                     $(".divAdrress").removeClass("animate__animated  animate__fadeOut animate__fadeIn");
                     $(".divAdrress").removeClass("animate__animated  animate__fadeOut animate__fadeIn");
                     $(".divInfo").css("display", "none");
@@ -967,6 +1166,7 @@
                     $(".divAdrress").css("display", "block");
                     $(".divAdrress").addClass("animate__animated  animate__fadeIn");
                     step = 1;
+                    $(".divWhite").css("top", "125px");
                 }
             }
 
@@ -979,6 +1179,7 @@
             $(".divAdrress").addClass("animate__animated  animate__fadeOut")
             $(".divAdrress1").css("display", "block");
             $(".divAdrress1").addClass("animate__animated  animate__fadeIn");
+            $(".divWhite").css("top", "125px");
             step = 2;
         }
         else if (step === 2) {
@@ -989,6 +1190,7 @@
             $(".divAdrress1").addClass("animate__animated  animate__fadeOut")
             $(".divFinancial").css("display", "block");
             $(".divFinancial").addClass("animate__animated  animate__fadeIn");
+            $(".divWhite").css("top", "195px");
             step = 3;
         }
         else if (step === 3) {
@@ -999,6 +1201,7 @@
             $(".divFinancial").addClass("animate__animated  animate__fadeOut")
             $(".divFatca").css("display", "block");
             $(".divFatca").addClass("animate__animated  animate__fadeIn");
+            $(".divWhite").css("top", "260px");
             step = 4;
         }
         else if (step === 4) {
@@ -1009,6 +1212,7 @@
             $(".divFatca").addClass("animate__animated  animate__fadeOut")
             $(".divFatca1").css("display", "block");
             $(".divFatca1").addClass("animate__animated  animate__fadeIn");
+            $(".divWhite").css("top", "330px");
             step = 5;
         }
         else if (step === 5) {
@@ -1019,6 +1223,7 @@
             $(".divFatca1").addClass("animate__animated  animate__fadeOut")
             $(".divCsa").css("display", "block");
             $(".divCsa").addClass("animate__animated  animate__fadeIn");
+            $(".divWhite").css("top", "400px");
             step = 6;
         }
         else if (step === 6) {
@@ -1029,6 +1234,7 @@
             $(".divCsa").addClass("animate__animated  animate__fadeOut")
             $(".divPep").css("display", "block");
             $(".divPep").addClass("animate__animated  animate__fadeIn");
+            $(".divWhite").css("top", "470px");
             step = 7;
         }
     });

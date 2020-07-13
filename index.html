@@ -24,7 +24,7 @@
         <a href="#">ABOUT</a>
         <a href="#">PRODUCTS</a>
         <a href="#" data-toggle="modal" data-target="#exampleModal">LOG-IN</a>
-        <a href="#">CONTACT</a>
+        <a href="#" data-toggle="modal" data-target="#contactModal">CONTACT</a>
     </div>
 
 
@@ -52,7 +52,8 @@
                             <li><a class="nav-link btnlogin" href="contact.html" data-toggle="modal"
                                     data-target="#exampleModal">LOG-IN</a>
                             </li>
-                            <li><a class="nav-link btncontact" href="contact.html">CONTACT</a></li>
+                            <li><a class="nav-link btncontact" href="contact.html" data-toggle="modal"
+                                    data-target="#contactModal">CONTACT</a></li>
                         </ul>
                     </div>
                 </div>
@@ -79,7 +80,7 @@
         <div class="container con conBody">
             <div class="row">
                 <div class="col-lg-12">
-                    <p class = "pHow">How it works</p>
+                    <p class="pHow">How it works</p>
                     <div class="box form-inline" style="margin-top: 25px;">
                         <div class="divIcon1 form-inline">
                             <div class="divIcon" style="padding: 10px 20px;">
@@ -209,6 +210,28 @@
             </div>
         </div>
     </div>
+
+    <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body" style="border: 0px; margin: 0 auto">
+                    <p class="pLogin">Contact Us</p>
+                    <input type="text" class="txtEmail" placeholder="name *">
+                    <input type="text" class="txtEmail" placeholder="e-mail *" style="margin-top: 20px;">
+                    <input type="text" class="txtEmail" placeholder="company name" style="margin-top: 20px;">
+                    <textarea>message
+                    </textarea>
+                    <p class="pGuide">* - required fields</p>
+                    <div class="row" style="margin-top: -20px;">
+                        <div class="col-lg-12 text-center" style="margin: 0 auto;">
+                            <input type="button" value="SUBMIT" class="btnSubmit1 float-right">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 <script>
     $(document).ready(function () {
@@ -256,6 +279,14 @@
     $('#exampleModal').on('shown.bs.modal', function (e) {
         document.getElementById("mySidenav").style.width = "0";
         $("#exampleModal1").modal('hide');
+    })
+
+    $('#contactModal').on('shown.bs.modal', function (e) {
+        $(".conMainBody").css("filter", "blur(50px)");
+    })
+
+    $('#contactModal').on('hidden.bs.modal', function (e) {
+        $(".conMainBody").css("filter", "blur(0px)");
     })
 
 </script>

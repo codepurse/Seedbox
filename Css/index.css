@@ -17,6 +17,13 @@
     }
   }
 
+  @media only screen and (max-height: 835) {
+    .conContent {
+      height: 780px !important;
+    }
+  }
+
+
   @media only screen and (max-width: 480px) {
     .span {
       display: block !important;
@@ -600,3 +607,13 @@
     margin: 5px;
     z-index: 9999999999;
   }
+
+  .pGuide {
+    font-family: "Proxima Regular";
+    color: #13C95C;
+    font-size: 0.9rem;
+    margin-top: -15px;
+    margin-left: 5px;
+  }
+
+ 

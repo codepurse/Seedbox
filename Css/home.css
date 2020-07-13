@@ -19,19 +19,15 @@ body, html {
         font-size: 2rem !important;
         margin-top: -15px !important;
     }
-
     .navbar-toggler-icon {
         display: none !important;
     }
-
     .conContent {
         margin-top: -70px !important;
     }
-
     .conBody {
         margin-top: -125px !important;
     }
-
     .box {
         display: block !important;
         width: auto !important;
@@ -69,20 +65,16 @@ body, html {
     .imgInvest {
         width: 29% !important;
     }
-
     .imgLast {
         width: 20% !important;
         margin-top: 5px !important;
     }
-
     .row1 {
         margin-top: 70px !important;
     }
-
     .colImage {
         margin-top: 40px !important;
     }
-
     .pHow {
         font-size: 1.4rem !important;
     }
@@ -311,39 +303,39 @@ hr {
 }
 
 .sidenav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: white;
-  box-shadow: 5px 10px 30px #89898929;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-  border-top-right-radius: 18px;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: white;
+    box-shadow: 5px 10px 30px #89898929;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    border-top-right-radius: 18px;
 }
 
 .sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 20px;
-  color: #1A1A1A;
-  display: block;
-  transition: 0.3s;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #1A1A1A;
+    display: block;
+    transition: 0.3s;
 }
 
 .sidenav a:hover {
-  color: #13C95C;
+    color: #13C95C;
 }
 
 .sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
 }
 
 .pHow {
@@ -353,3 +345,21 @@ hr {
     text-align: center;
 }
 
+textarea {
+    width: 100%;
+    height: 100px;
+    border: 0px;
+    border-radius: 10px;
+    background-color: white;
+    padding: 5px;
+    margin-top: 20px !important;
+    box-shadow: 0px 3px 6px #00000029;
+}
+
+.pGuide {
+    font-family: "Proxima Regular";
+    color: #13C95C;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    margin-left: 5px;
+}

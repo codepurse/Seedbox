@@ -25,7 +25,7 @@
         <a href="#">ABOUT</a>
         <a href="#">PRODUCTS</a>
         <a href="#" data-toggle="modal" data-target="#exampleModal">LOG-IN</a>
-        <a href="#">CONTACT</a>
+        <a href="#" data-toggle="modal" data-target="#contactModal">CONTACT</a>
     </div>
 
     <div class="container-fluid" style="background-color: #fafafa;">
@@ -165,30 +165,15 @@
                 </div>
                 <div class="col-lg-5 col-md-5 colForm" style="margin: 0 auto;">
                     <div class="divInfo divForm">
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <div class="selectdiv" style="margin-top:0px;">
-                                    <select autocomplete="off" class="select2 ">
-                                        <option value="" disabled selected>Suffix
-                                        </option>
-                                        <option>Atty</option>
-                                        <option>Dr</option>
-                                        <option>Engr</option>
-                                        <option>Fr</option>
-                                        <option>Fr</option>
-                                        <option>Mr</option>
-                                        <option>Mrs</option>
-                                        <option>Sr</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-lg-8">
-                                <form>
-                                    <input required='' type='text' class="txtusername">
-                                    <label alt='Full name' placeholder='Full name'></label>
-                                </form>
-                            </div>
-                        </div>
+                        <form>
+                            <input required='' type='text' class="txtusername" id = "txtfullname">
+                            <label alt='Full name' placeholder='Full name'></label>
+                        </form>
+                        <p class="pGuide">Name must be comma seperate e.g "Juan, Santos, De la Cruz"</p>
+                        <form>
+                            <input required='' type='text' class="txtusername" style="margin-top: -10px;">
+                            <label alt='Mothers maiden Name' placeholder='Mothers maiden Name'></label>
+                        </form>
                         <form>
                             <input required='' type='text' class="txtusername">
                             <label alt='Mobile Number' placeholder='Mobile Number'></label>
@@ -347,7 +332,8 @@
                         </div>
                         <div class="row">
                             <div class="col-lg-12">
-                                <input type="button" class="btnSubmit btnProceed" value="Next">
+                                <input type="button" class="btnSubmit btnProceed" value="Next"
+                                    style="margin-top: -10px;">
                             </div>
                         </div>
                     </div>
@@ -514,11 +500,22 @@
                                     <label alt='Business/Employer Name' placeholder='Business/Employer Name'></label>
                                 </form>
                             </div>
-                            <div class="col-lg-6">
-                                <form>
-                                    <input required='' type='text' class="txtusername">
-                                    <label alt='Name of Business' placeholder='Nature of Business'></label>
-                                </form>
+                            <div class="col-lg-6" style="margin-top:-10px;">
+                                <div class="selectdiv">
+                                    <select autocomplete="off" class="select2">
+                                        <option value="" disabled selected>Nature of Business</option>
+                                        <option>Agribusiness</option>
+                                        <option>Construction</option>
+                                        <option>Education</option>
+                                        <option>Financial</option>
+                                        <option>Goverment</option>
+                                        <option>Information Technology</option>
+                                        <option>Manufacturing</option>
+                                        <option>Mining</option>
+                                        <option>Multi Industry</option>
+                                        <option>Non Profit Organization</option>
+                                    </select>
+                                </div>
                             </div>
                             <div class="col-lg-6" style="margin-top: -10px;">
                                 <div class="selectdiv">
@@ -527,20 +524,20 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="col-lg-12">
+                            <div class="col-lg-12" style="margin-top: 5px;">
                                 <form>
                                     <input required='' type='text' class="txtusername">
                                     <label alt='Office Address' placeholder='Office Address'></label>
                                 </form>
                             </div>
-                            <div class="col-lg-6" style="margin-top: -10px;">
+                            <div class="col-lg-6" style="margin-top: -15px;">
                                 <div class="selectdiv">
                                     <select autocomplete="off" class="select2">
                                         <option value="" disabled selected>City</option>
                                     </select>
                                 </div>
                             </div>
-                            <div class="col-lg-6" style="margin-top: -10px;">
+                            <div class="col-lg-6" style="margin-top: -15px;">
                                 <div class="selectdiv">
                                     <select autocomplete="off" class="select2">
                                         <option value="" disabled selected>Province/Region</option>
@@ -590,6 +587,13 @@
                                 <div class="selectdiv" style="margin-top: 10px;">
                                     <select autocomplete="off" class="select2">
                                         <option value="" disabled selected>Source of Funds</option>
+                                        <option>
+                                            Savings</option>
+                                        <option>Investments</option>
+                                        <option>Dividends</option>
+                                        <option>Others</option>
+                                        <option>Pension</option>
+                                        <option>Salary</option>
                                     </select>
                                 </div>
                             </div>
@@ -833,7 +837,7 @@
                     <div class="divPep divForm" style="display: none;">
                         <div class="row">
                             <div class="col-lg-12" style="margin-top: 10px;">
-                                <p class="pInfoTitle" style="margin-top: 0px;margin-bottom: 15px;">Pep Declaration
+                                <p class="pInfoTitle" style="margin-top: 0px;margin-bottom: 15px;">PEP Declaration
                                 </p>
                             </div>
                         </div>
@@ -877,7 +881,7 @@
                             </div>
                             <div class="col-lg-12">
                                 <form>
-                                    <input required='' type='text' class="txtusername">
+                                    <input required='' type='text' class="txtusername" id = "txtAccountname">
                                     <label alt='Account Name' placeholder='Account Name'></label>
                                 </form>
                             </div>
@@ -1246,6 +1250,7 @@
                     $(".divAdrress").addClass("animate__animated  animate__fadeIn");
                     step = 1;
                     $(".divWhite").css("top", "125px");
+                 
                 }
             }
 
@@ -1291,7 +1296,7 @@
             $(".divFatca").addClass("animate__animated  animate__fadeOut")
             $(".divFatca1").css("display", "block");
             $(".divFatca1").addClass("animate__animated  animate__fadeIn");
-           
+
             step = 5;
         }
         else if (step === 5) {

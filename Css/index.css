@@ -298,7 +298,7 @@
     cursor: pointer;
   }
 
-  .divInfo, .divAdrress, .divAdrress1, .divFinancial, .divFatca1, .divFatca, .divCsa, .divPep {
+  .divInfo, .divAdrress, .divAdrress1, .divFinancial, .divFatca1, .divFatca, .divCsa, .divPep, .divSettlement {
     width: 80%;
     margin: 0 auto;
     animation-duration: 0.2s !important;

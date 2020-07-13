@@ -841,7 +841,7 @@
                                 </div>
                                 <div class="selectdiv">
                                     <select autocomplete="off" class="select2">
-                                        <option value="" disabled selected> For this invesment, you are?
+                                        <option value="" disabled selected> For this investment, you are?
                                         </option>
                                         <option>"Willing to accept low to no risk for general stability ofyour
                                             money"
@@ -934,6 +934,16 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="row" style="margin-top: 20px;">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                <input type="button" class="btnBack" value="Back">
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                <input type="button" class="btnNext btnProceed" value="Next">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="divSettlement divForm" style="display: none;">
                         <div class="row">
                             <div class="col-lg-12" style="margin-top: 10px;">
                                 <p class="pInfoTitle" style="margin-top: 0px;margin-bottom: 15px;">Settlement
@@ -941,7 +951,7 @@
                             </div>
                             <div class="col-lg-12">
                                 <form>
-                                    <input required='' type='text' class="txtusername">
+                                    <input required='' type='text' class="txtusername txtSettle">
                                     <label alt='Bank Name' placeholder='Bank Name'></label>
                                 </form>
                             </div>
@@ -951,7 +961,7 @@
                                     <label alt='Account Name' placeholder='Account Name'></label>
                                 </form>
                             </div>
-                            <div class="col-lg-12">
+                            <div class="col-lg-12 ">
                                 <form>
                                     <input required='' type='text' class="txtusername">
                                     <label alt='Account Number' placeholder='Account Number'></label>
@@ -1212,7 +1222,18 @@
 
 
     $(".btnBack").click(function () {
-        if (step === 7) {
+        if (step === 8) {
+            $(".pMore").text("PEP Declaration");
+            $(".divSettlement").css("display", "none");
+            $(".divSettlement").removeClass("animate__fadeOut")
+            $(".divSettlement").addClass("animate__animated  animate__fadeOut")
+            $(".divPep").css("display", "block");
+            $(".divPep").removeClass("animate__fadeOut")
+            $(".divPep").addClass("animate__animated  animate__fadeIn");
+            $(".divWhite").css("top", "400px");
+            step = 7;
+        }
+        else if (step === 7) {
             $(".pMore").text("CSA");
             $(".divPep").css("display", "none");
             $(".divPep").removeClass("animate__fadeOut")
@@ -1394,15 +1415,26 @@ var bday = $("#selectYY").val() + - + $("#selectMM").val() + - + $("#selectDD").
             step = 6;
         }
         else if (step === 6) {
-            $(".pMore").text("PEP / Settlement");
+            $(".pMore").text("PEP Declaration");
             $(".divPep").removeClass("animate__animated  animate__fadeOut animate__fadeIn");
             $(".divCsa").removeClass("animate__animated  animate__fadeOut animate__fadeIn");
             $(".divCsa").css("display", "none");
             $(".divCsa").addClass("animate__animated  animate__fadeOut")
             $(".divPep").css("display", "block");
             $(".divPep").addClass("animate__animated  animate__fadeIn");
-            $(".divWhite").css("top", "470px");
+            $(".divWhite").css("top", "400px");
             step = 7;
+        }
+        else if (step === 7) {
+            $(".pMore").text("Settlement Information");
+            $(".divSettlement").removeClass("animate__animated  animate__fadeOut animate__fadeIn");
+            $(".divSettlement").removeClass("animate__animated  animate__fadeOut animate__fadeIn");
+            $(".divPep").css("display", "none");
+            $(".divPep").addClass("animate__animated  animate__fadeOut")
+            $(".divSettlement").css("display", "block");
+            $(".divSettlement").addClass("animate__animated  animate__fadeIn");
+            $(".divWhite").css("top", "470px");
+            step = 8;
         }
     });
 

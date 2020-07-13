@@ -169,7 +169,7 @@
                             <input required='' type='text' class="txtusername" id = "txtfullname">
                             <label alt='Full name' placeholder='Full name'></label>
                         </form>
-                        <p class="pGuide">Name must be comma seperate e.g "Juan, Santos, De la Cruz"</p>
+                        <p class="pGuide">Name must be comma-seperated e.g "Juan, Santos, De la Cruz"</p>
                         <form>
                             <input required='' type='text' class="txtusername" style="margin-top: -10px;">
                             <label alt='Mothers maiden Name' placeholder='Mothers maiden Name'></label>
@@ -516,7 +516,7 @@
                                         <option>Non Profit Organization</option>
                                         <option>Retail</option>
                                         <option>Services</option>
-                                        <option>Trading</option>
+                                        <option>Trading </option>
                                     </select>
                                 </div>
                             </div>
@@ -627,8 +627,8 @@
                                 <div class="selectdiv">
                                     <select autocomplete="off" class="select2">
                                         <option value="" disabled selected>Are you a US Resident?</option>
-                                        <option>Yes</option>
                                         <option>No</option>
+                                        <option>Yes</option>
                                     </select>
                                 </div>
                             </div>
@@ -636,8 +636,8 @@
                                 <div class="selectdiv">
                                     <select autocomplete="off" class="select2">
                                         <option value="" disabled selected>Are you a US Citizen?</option>
-                                        <option>Yes</option>
                                         <option>No</option>
+                                        <option>Yes</option>
                                     </select>
                                 </div>
                             </div>
@@ -645,8 +645,8 @@
                                 <div class="selectdiv">
                                     <select autocomplete="off" class="select2">
                                         <option value="" disabled selected>Are you a US resident alien?</option>
-                                        <option>Yes</option>
                                         <option>No</option>
+                                        <option>Yes</option>
                                     </select>
                                 </div>
                             </div>
@@ -656,8 +656,8 @@
                                         <option value="" disabled selected>Do you have a current US telephone
                                             number?
                                         </option>
-                                        <option>Yes</option>
                                         <option>No</option>
+                                        <option>Yes</option>
                                     </select>
                                 </div>
                             </div>
@@ -666,8 +666,8 @@
                                     <select autocomplete="off" class="select2">
                                         <option value="" disabled selected>Were you born in US?
                                         </option>
-                                        <option>Yes</option>
                                         <option>No</option>
+                                        <option>Yes</option>
                                     </select>
                                 </div>
                             </div>
@@ -677,8 +677,8 @@
                                         <option value="" disabled selected>Do you have a current US residence
                                             address?
                                         </option>
-                                        <option>Yes</option>
                                         <option>No</option>
+                                        <option>Yes</option>
                                     </select>
                                 </div>
                             </div>
@@ -688,8 +688,8 @@
                                         <option value="" disabled selected>Do you have a current US mailing address?
                                             (including US P.O.)
                                         </option>
-                                        <option>Yes</option>
                                         <option>No</option>
+                                        <option>Yes</option>
                                     </select>
                                 </div>
                             </div>
@@ -1129,8 +1129,9 @@
 
     $("#cbx").change(function (event) {
         if (this.checked) {
-            $(".txtAdd").attr("disabled", "disabled");
-            $(".txtAdd").addClass("disabledText");
+            $(".txtPermaAdd1").val($(".txtCurrentAdd1").val());
+            $(".txtPermaAdd2").val($(".txtCurrentAdd2").val());
+           
         } else {
             $(".txtAdd").removeAttr('disabled');
             $(".txtAdd").removeClass("disabledText");

@@ -104,7 +104,7 @@
                             </div>
                         </div>
                         <div class="col-lg-9 col-md-9 col-sm-9 col-9  colStepText">
-                            <p class="pSteps" onclick="functionAdrress()">Addres Information ></p>
+                            <p class="pSteps" onclick="functionAdrress()">Address Information ></p>
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-3 col">
                             <div class="divCircle" style="position: relative;">
@@ -171,8 +171,14 @@
                                     <select autocomplete="off" class="select2 ">
                                         <option value="" disabled selected>Suffix
                                         </option>
+                                        <option>Atty</option>
+                                        <option>Dr</option>
+                                        <option>Engr</option>
+                                        <option>Fr</option>
+                                        <option>Fr</option>
+                                        <option>Mr</option>
+                                        <option>Mrs</option>
                                         <option>Sr</option>
-                                        <option>Jr</option>
                                     </select>
                                 </div>
                             </div>
@@ -194,12 +200,14 @@
                         <p class="pError pErrorEmail error" style="margin-top:-10px;">Error! Please put a valid email.
                         </p>
                         <p class="pError pErrorEmail success">Your email in valid.</p>
-                        <form>
-                            <input required='' type='text' class="txtusername">
-                            <label alt='Referral Agent Code' placeholder='Referral Agent Code'></label>
-                        </form>
                         <div class="row">
-                            <div class="col-lg-4 col-md-4 col-sm-12 col-12">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                <form>
+                                    <input required='' type='text' class="txtusername">
+                                    <label alt='Referral Agent Code' placeholder='Referral Agent Code'></label>
+                                </form>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-6">
                                 <div class="selectdiv" style="margin-top:0px;">
                                     <select autocomplete="off" class="select2">
                                         <option value="" disabled selected>Gender
@@ -209,7 +217,12 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="col-lg-8 col-md-8 col-sm-12 col-12">
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-3 col-md-4 col-sm-12 col-12 align-self-center">
+                                <p class="pExpiry" style="margin-left: 10px;">Birthdate</p>
+                            </div>
+                            <div class="col-lg-9 col-md-8 col-sm-12 col-12">
                                 <div class="row">
                                     <div class="col-lg-4 col-md-4 col-sm-4 col-4">
                                         <div class="selectdiv" style="margin-top:0px;">
@@ -282,7 +295,19 @@
                                                 <option>1985</option>
                                                 <option>1986</option>
                                                 <option>1987</option>
-                                                <option>2010</option>
+                                                <option>1988</option>
+                                                <option>1989</option>
+                                                <option>1990</option>
+                                                <option>1991</option>
+                                                <option>1992</option>
+                                                <option>1993</option>
+                                                <option>1994</option>
+                                                <option>1995</option>
+                                                <option>1996</option>
+                                                <option>1997</option>
+                                                <option>1998</option>
+                                                <option>1999</option>
+                                                <option>2000</option>
                                             </select>
                                         </div>
                                     </div>
@@ -293,10 +318,14 @@
                             <p class="pError pErrorAge">Your email in valid.</p>
                         </div>
                         <form style="margin-top: 5px;">
-                            <input required='' type='text' class="txtusername">
-                            <label alt='Birthplace' placeholder='Birthplace'></label>
+                            <div class="selectdiv" style="margin-top:0px;">
+                                <select autocomplete="off" class="select2">
+                                    <option value="" disabled selected>Birthplace
+                                    </option>
+                                </select>
+                            </div>
                         </form>
-                        <form>
+                        <form style="margin-top: 65px !important;">
                             <input required='' type='text' class="txtusername">
                             <label alt='Citizenship' placeholder='Citizenship'></label>
                         </form>
@@ -333,7 +362,7 @@
                                         <option>GSIS ID</option>
                                         <option>TIN ID</option>
                                         <option>Pag-Ibig ID</option>
-                                        <option>Driver license (Pro & Non-Pro)</option>
+                                        <option>Driver license</option>
                                         <option>Philhealth</option>
                                         <option>PRC ID</option>
                                         <option>Postal ID</option>
@@ -393,29 +422,31 @@
                                     <label alt='Current Address Line 2' placeholder='Current Address Line 2'></label>
                                 </form>
                             </div>
-
-                            <div class="col-lg-6">
-                                <form>
-                                    <input required='' type='text' class="txtusername txtCity">
-                                    <label alt='City' placeholder='City'></label>
-                                </form>
+                            <div class="col-lg-6" style="margin-top: -10px;">
+                                <div class="selectdiv">
+                                    <select autocomplete="off" class="select2">
+                                        <option value="" disabled selected>City</option>
+                                    </select>
+                                </div>
                             </div>
-                            <div class="col-lg-6">
-                                <form>
-                                    <input required='' type='text' class="txtusername txtRegion">
-                                    <label alt='Region' placeholder='Region'></label>
-                                </form>
+                            <div class="col-lg-6" style="margin-top: -10px;">
+                                <div class="selectdiv">
+                                    <select autocomplete="off" class="select2">
+                                        <option value="" disabled selected>Region</option>
+                                    </select>
+                                </div>
                             </div>
                             <div class="col-lg-12">
-                                <form>
-                                    <input required='' type='text' class="txtusername txtCountry">
-                                    <label alt='Country' placeholder='Country'></label>
-                                </form>
+                                <div class="selectdiv">
+                                    <select autocomplete="off" class="select2">
+                                        <option value="" disabled selected>Country</option>
+                                    </select>
+                                </div>
                             </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-6" style="margin-top: 10px;">
                                 <input type="button" class="btnBack" value="Back">
                             </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-6" style="margin-top: 10px;">
                                 <input type="button" class="btnNext btnProceed" value="Next">
                             </div>
                         </div>
@@ -451,28 +482,31 @@
                                     <label class="lblAdd" alt='Permanent Address Line 2' placeholder='Addres'></label>
                                 </form>
                             </div>
-                            <div class="col-lg-6 colAdd">
-                                <form>
-                                    <input required='' type='text' class="txtusername txtAdd txtPermaCity">
-                                    <label class="lblAdd" alt='City' placeholder='City'></label>
-                                </form>
+                            <div class="col-lg-6 colAdd" style="margin-top: -15px;">
+                                <div class="selectdiv">
+                                    <select autocomplete="off" class="select2">
+                                        <option value="" disabled selected>City</option>
+                                    </select>
+                                </div>
                             </div>
-                            <div class="col-lg-6 colAdd">
-                                <form>
-                                    <input required='' type='text' class="txtusername txtAdd txtPermaRegion">
-                                    <label class="lblAdd" alt='Region' placeholder='Region'></label>
-                                </form>
+                            <div class="col-lg-6 colAdd" style="margin-top: -15px;">
+                                <div class="selectdiv">
+                                    <select autocomplete="off" class="select2">
+                                        <option value="" disabled selected>Region</option>
+                                    </select>
+                                </div>
                             </div>
                             <div class="col-lg-12 colAdd">
-                                <form>
-                                    <input required='' type='text' class="txtusername txtAdd txtPermaCountry">
-                                    <label class="lblAdd" alt='Country' placeholder='Country'></label>
-                                </form>
+                                <div class="selectdiv">
+                                    <select autocomplete="off" class="select2">
+                                        <option value="" disabled selected>Country</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-lg-12">
-                                <p class="pInfoTitle" style="margin-top: -10px;">Professional Details</p>
+                                <p class="pInfoTitle" style="margin-top: 10px;">Professional Details</p>
                             </div>
                             <div class="col-lg-12" style="margin-top: 10px;">
                                 <form>
@@ -486,11 +520,12 @@
                                     <label alt='Name of Business' placeholder='Name of Business'></label>
                                 </form>
                             </div>
-                            <div class="col-lg-6">
-                                <form>
-                                    <input required='' type='text' class="txtusername">
-                                    <label alt='Country' placeholder='Country'></label>
-                                </form>
+                            <div class="col-lg-6" style="margin-top: -10px;">
+                                <div class="selectdiv">
+                                    <select autocomplete="off" class="select2">
+                                        <option value="" disabled selected>Country</option>
+                                    </select>
+                                </div>
                             </div>
                             <div class="col-lg-12">
                                 <form>
@@ -498,17 +533,19 @@
                                     <label alt='Office Address' placeholder='Office Address'></label>
                                 </form>
                             </div>
-                            <div class="col-lg-6">
-                                <form>
-                                    <input required='' type='text' class="txtusername">
-                                    <label alt='City' placeholder='City'></label>
-                                </form>
+                            <div class="col-lg-6" style="margin-top: -10px;">
+                                <div class="selectdiv">
+                                    <select autocomplete="off" class="select2">
+                                        <option value="" disabled selected>City</option>
+                                    </select>
+                                </div>
                             </div>
-                            <div class="col-lg-6">
-                                <form>
-                                    <input required='' type='text' class="txtusername">
-                                    <label alt='Region' placeholder='Region'></label>
-                                </form>
+                            <div class="col-lg-6" style="margin-top: -10px;">
+                                <div class="selectdiv">
+                                    <select autocomplete="off" class="select2">
+                                        <option value="" disabled selected>Region</option>
+                                    </select>
+                                </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6 col-6">
                                 <input type="button" class="btnBack" value="Back">
@@ -524,29 +561,47 @@
                                 <p class="pInfoTitle" style="margin-top: 0px;">Financial Profile</p>
                             </div>
                             <div class="col-lg-12" style="margin-top: 10px;">
-                                <form>
-                                    <input required='' type='text' class="txtusername">
-                                    <label alt='Annual Gross Income' placeholder='Annual Gross Income'></label>
-                                </form>
+                                <div class="selectdiv">
+                                    <select autocomplete="off" class="select2">
+                                        <option value="" disabled selected> Annual Gross Income
+                                        </option>
+                                        <option>
+                                            < 250,000 PHP</option>
+                                        <option>250,000 - 500,000 PHP</option>
+                                        <option>500,000 - 1,000,000 PHP</option>
+                                        <option>> 1,000,000 PHP</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-6" style="margin-top: 0px;">
+                                <div class="selectdiv">
+                                    <select autocomplete="off" class="select2">
+                                        <option value="" disabled selected> Net Worth
+                                        </option>
+                                        <option>
+                                            < 1,000,000 PHP</option>
+                                        <option>1 - 10 Million</option>
+                                        <option>10 - 20 Million</option>
+                                        <option>20 million and above</option>
+                                    </select>
+                                </div>
                             </div>
                             <div class="col-lg-6">
-                                <form>
-                                    <input required='' type='text' class="txtusername">
-                                    <label alt='Net Worth' placeholder='Net Worth'></label>
-                                </form>
-                            </div>
-                            <div class="col-lg-6">
-                                <form>
-                                    <input required='' type='text' class="txtusername">
-                                    <label alt='Source of Funds' placeholder='Source of Funds'></label>
-                                </form>
+                                <div class="selectdiv" style="margin-top: 10px;">
+                                    <select autocomplete="off" class="select2">
+                                        <option value="" disabled selected>Source of Funds</option>
+                                    </select>
+                                </div>
                             </div>
                             <div class="col-lg-12">
-                                <form>
-                                    <input required='' type='text' class="txtusername">
-                                    <label alt='Are you director/officer/shareholder?'
-                                        placeholder='Are you director/officer/shareholder?'></label>
-                                </form>
+                                <div class="selectdiv" style="margin-top: 8px;">
+                                    <select autocomplete="off" class="select2">
+                                        <option value="" disabled selected>Are you director/officer/shareholder?
+                                        </option>
+                                        <option>Yes</option>
+                                        <option>No</option>
+                                    </select>
+                                </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6 col-6">
                                 <input type="button" class="btnBack" value="Back">
@@ -591,7 +646,8 @@
                             <div class="col-lg-12">
                                 <div class="selectdiv">
                                     <select autocomplete="off" class="select2">
-                                        <option value="" disabled selected>Do you have a current US telephone number?
+                                        <option value="" disabled selected>Do you have a current US telephone
+                                            number?
                                         </option>
                                         <option>Yes</option>
                                         <option>No</option>
@@ -611,7 +667,8 @@
                             <div class="col-lg-12">
                                 <div class="selectdiv">
                                     <select autocomplete="off" class="select2">
-                                        <option value="" disabled selected>Do you have a current US residence address?
+                                        <option value="" disabled selected>Do you have a current US residence
+                                            address?
                                         </option>
                                         <option>Yes</option>
                                         <option>No</option>
@@ -649,28 +706,27 @@
                                     <select autocomplete="off" class="select2">
                                         <option value="" disabled selected> Have you issued a standing instruction
                                             to transfer funds to an account maintained in the U.S? </option>
-                                        <option>Option 1</option>
-                                        <option>Option 2</option>
-                                        <option>Last long option</option>
+                                        <option>Yes</option>
+                                        <option>No</option>
                                     </select>
                                 </div>
                                 <div class="selectdiv">
                                     <select autocomplete="off" class="select2">
                                         <option value="" disabled selected> Have you issued a power of Attorney or
                                             granted signatory authority to a person with US address?</option>
-                                        <option>Option 1</option>
-                                        <option>Option 2</option>
-                                        <option>Last long option</option>
+                                        <option>Yes</option>
+                                        <option>No</option>
                                     </select>
                                 </div>
                                 <div class="selectdiv">
                                     <select autocomplete="off" class="select2">
-                                        <option value="" disabled selected> Do you have “in care of” address or “hold
-                                            mail” address that is the sole address for an account (whether such address
+                                        <option value="" disabled selected> Do you have “in care of” address or
+                                            “hold
+                                            mail” address that is the sole address for an account (whether such
+                                            address
                                             in the US or outside the US)?</option>
-                                        <option>Option 1</option>
-                                        <option>Option 2</option>
-                                        <option>Last long option</option>
+                                        <option>Yes</option>
+                                        <option>No</option>
                                     </select>
                                 </div>
                             </div>
@@ -694,53 +750,72 @@
                                     <select autocomplete="off" class="select2">
                                         <option value="" disabled selected> What is the purpose of your investment?
                                         </option>
-                                        <option>Option 1</option>
-                                        <option>Option 2</option>
-                                        <option>Last long option</option>
+                                        <option>Growth</option>
+                                        <option>Investment</option>
+                                        <option>Income</option>
+                                        <option>Portfolio</option>
+                                        <option>Speculation</option>
+                                        <option>Savings</option>
+                                        <option>Others</option>
                                     </select>
                                 </div>
                                 <div class="selectdiv">
                                     <select autocomplete="off" class="select2">
                                         <option value="" disabled selected> How long are you investing for?</option>
-                                        <option>Option 1</option>
-                                        <option>Option 2</option>
-                                        <option>Last long option</option>
+                                        <option>Up to two years</option>
+                                        <option>3-5 Years</option>
+                                        <option>5-7 Years</option>
+                                        <option>7 years and up</option>
                                     </select>
                                 </div>
                                 <div class="selectdiv">
                                     <select autocomplete="off" class="select2">
-                                        <option value="" disabled selected> What are you using this investment for?
+                                        <option value="" disabled selected> For this invesment, you are?
                                         </option>
-                                        <option>Option 1</option>
-                                        <option>Option 2</option>
-                                        <option>Last long option</option>
+                                        <option>"Willing to accept low to no risk for general stability ofyour
+                                            money"
+                                        </option>
+                                        <option>"Willing to accept moderate risk in return for some growth
+                                            opportunity"
+                                        </option>
+                                        <option>"Willing to accept high risk for potentially higher return"</option>
                                     </select>
                                 </div>
                                 <div class="selectdiv">
                                     <select autocomplete="off" class="select2">
-                                        <option value="" disabled selected> How knowledgeable are you as an investor?
+                                        <option value="" disabled selected> How knowledgeable are you as an
+                                            investor?
                                         </option>
-                                        <option>Option 1</option>
-                                        <option>Option 2</option>
-                                        <option>Last long option</option>
+                                        <option>I am a new or novice investor</option>
+                                        <option>I have some knowledge about investing</option>
+                                        <option>I am generally knowledgeable about investing</option>
+                                        <option>I am very knowledgeable about investing</option>
                                     </select>
                                 </div>
                                 <div class="selectdiv">
                                     <select autocomplete="off" class="select2">
-                                        <option value="" disabled selected> Which of the following have you invested in?
+                                        <option value="" disabled selected> Which of the following have you invested
+                                            in?
                                         </option>
-                                        <option>Option 1</option>
-                                        <option>Option 2</option>
-                                        <option>Last long option</option>
+                                        <option>Cash and deposit products (e.g. time deposit, SDA)</option>
+                                        <option>Government securities or corporate fixed-income securities</option>
+                                        <option>Stocks</option>
+                                        <option>Mutual funds or UITFs</option>
+                                        <option>Insurance products (including variable unit linked products and
+                                            pre-need)</option>
+                                        <option>Offshore funds (including ETFs, REITs)</option>
+                                        <option>Structured financial products</option>
+                                        <option>Commodities</option>
+                                        <option>Real estate</option>
                                     </select>
                                 </div>
                                 <div class="selectdiv">
                                     <select autocomplete="off" class="select2">
-                                        <option value="" disabled selected> Do you have regular liquidity requirement?
+                                        <option value="" disabled selected> Do you have regular liquidity
+                                            requirement?
                                         </option>
-                                        <option>Option 1</option>
-                                        <option>Option 2</option>
-                                        <option>Last long option</option>
+                                        <option>Yes</option>
+                                        <option>No</option>
                                     </select>
                                 </div>
                             </div>
@@ -757,7 +832,8 @@
                     <div class="divPep divForm" style="display: none;">
                         <div class="row">
                             <div class="col-lg-12" style="margin-top: 10px;">
-                                <p class="pInfoTitle" style="margin-top: 0px;margin-bottom: 15px;">Pep Declaration</p>
+                                <p class="pInfoTitle" style="margin-top: 0px;margin-bottom: 15px;">Pep Declaration
+                                </p>
                             </div>
                         </div>
                         <div class="row">
@@ -774,8 +850,10 @@
                                 </div>
                                 <div class="selectdiv">
                                     <select autocomplete="off" class="select2">
-                                        <option value="" disabled selected>Do you have any relative who is/was elected a
-                                            government official or is/was an appointed official up to second degree of
+                                        <option value="" disabled selected>Do you have any relative who is/was
+                                            elected a
+                                            government official or is/was an appointed official up to second degree
+                                            of
                                             consanguinity or affinity?
                                         </option>
                                         <option>Option 1</option>

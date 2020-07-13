@@ -131,6 +131,18 @@
       left: 13px !important;
     }
   }
+  @media only screen and (max-width: 359px) {
+    .hrLine {
+      top: -13px !important;
+      width: 40px !important;
+      height: 4px !important;
+      left: 13px !important;
+    }
+    .col {
+      padding-left: 12px !important;
+    
+    }
+  }
 
   @font-face {
     font-family: "Proxima Regular";

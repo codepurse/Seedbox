@@ -82,6 +82,10 @@ body, html {
     .colImage {
         margin-top: 40px !important;
     }
+
+    .pHow {
+        font-size: 1.4rem !important;
+    }
 }
 
 @media only screen and (max-width: 380px) {
@@ -340,5 +344,12 @@ hr {
   right: 25px;
   font-size: 36px;
   margin-left: 50px;
+}
+
+.pHow {
+    font-family: "Proxima Bold";
+    color: #13C95C;
+    font-size: 3rem;
+    text-align: center;
 }
 

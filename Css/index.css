@@ -220,6 +220,7 @@
     border-radius: 1.5em;
     resize: none;
     outline: none;
+    padding-left: 20px;
   }
 
   input[type="text"][required]:focus {

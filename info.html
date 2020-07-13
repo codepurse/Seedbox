@@ -175,15 +175,18 @@
                             <label alt='Mothers maiden Name' placeholder='Mothers maiden Name'></label>
                         </form>
                         <form>
-                            <input required='' type='text' class="txtusername">
+                            <input required='' type='text' class="txtusername" id="txtMobileNumber">
                             <label alt='Mobile Number' placeholder='Mobile Number'></label>
                         </form>
                         <form>
                             <input required='' type='text' class="txtusername txtEmail">
                             <label alt='E-mail' placeholder='E-mail'></label>
                         </form>
-                        <p class="pError pErrorEmail error" style="margin-top:-10px;">Error! Please put a valid email.
+                        <!--
+
+                           <p class="pError pErrorEmail error" style="margin-top:-10px;">Error! Please put a valid email.
                         </p>
+                     -->
                         <p class="pError pErrorEmail success">Your email in valid.</p>
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-6 col-12">
@@ -359,8 +362,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-12">
-                            <p class="pError pErrorAge">Your email in valid.</p>
+                        <div class="col-lg-12" style="margin-top:15px;">
+                            <p class="pGuide" style="margin-left: -5px;">Your age must be 18yrs old above</p>
                         </div>
                         <form style="margin-top: 5px;">
                             <div class="selectdiv" style="margin-top:0px;">
@@ -975,11 +978,14 @@
 <script>
     var step = 0;
     var show = 0;
+
+    $('#txtMobileNumber').bind('keyup paste', function () {
+        this.value = this.value.replace(/[^0-9]/g, '');
+    });
     function functionShowAdd() {
         if (show === 0) {
             $(".colAdd").css("display", "none");
             $(".imgArrow").css("transform", "rotate(180deg)");
-
             show = 1;
         }
         else {
@@ -1293,7 +1299,8 @@
 
     $(".btnProceed").click(function () {
         if (step === 0) {
-            var bday = $("#selectYY").val() + - + $("#selectMM").val() + - + $("#selectDD").val();
+            /*
+var bday = $("#selectYY").val() + - + $("#selectMM").val() + - + $("#selectDD").val();
             var dob = bday;
             if (dob != '') {
                 var str = dob.split('-');
@@ -1318,6 +1325,17 @@
                     $("#txtAccountname").val($("#txtfullname").val());
                 }
             }
+            */
+            $(".pErrorAge").css("display", "none");
+            $(".divAdrress").removeClass("animate__animated  animate__fadeOut animate__fadeIn");
+            $(".divAdrress").removeClass("animate__animated  animate__fadeOut animate__fadeIn");
+            $(".divInfo").css("display", "none");
+            $(".divInfo").addClass("animate__animated  animate__fadeOut")
+            $(".divAdrress").css("display", "block");
+            $(".divAdrress").addClass("animate__animated  animate__fadeIn");
+            step = 1;
+            $(".divWhite").css("top", "125px");
+            $("#txtAccountname").val($("#txtfullname").val());
 
         }
         else if (step === 1) {

@@ -1041,6 +1041,14 @@
         $(".divAdrress1").css("display", "block");
         $(".divAdrress1").addClass("animate__animated  animate__fadeIn");
         $(".divWhite").css("top", "125px");
+        if ($("#cbx").is(":checked")) {
+            $(".txtPermaAdd1").val($(".txtCurrentAdd1").val());
+            $(".txtPermaAdd2").val($(".txtCurrentAdd2").val());
+        }
+        else if ($(this).is(":not(:checked)")) {
+            $(".txtPermaAdd1").val("");
+            $(".txtPermaAdd2").val("");
+        }
         step = 2;
     }
 
@@ -1106,6 +1114,7 @@
         $(".divSettlement").css("display", "block");
         $(".divSettlement").addClass("animate__animated  animate__fadeIn");
         $(".divWhite").css("top", "470px");
+        $("#txtAccountname").val($("#txtfullname").val());
         step = 8;
     }
 
@@ -1139,7 +1148,7 @@
                     $text.val($text.val() + '-');
                 }
             }
-            if ($("#IdType").val() === "Driver license (Pro & Non-Pro)") {
+            if ($("#IdType").val() === "Driver license") {
                 $('#txtIdNumber').attr('maxlength', '13');
                 $text = $('#txtIdNumber');
                 if ($text.val().length === 3) {
@@ -1210,8 +1219,8 @@
             $(".txtPermaAdd2").val($(".txtCurrentAdd2").val());
 
         } else {
-            $(".txtAdd").removeAttr('disabled');
-            $(".txtAdd").removeClass("disabledText");
+            $(".txtPermaAdd1").val("");
+            $(".txtPermaAdd2").val("");
         }
     });
 
@@ -1367,6 +1376,14 @@ var bday = $("#selectYY").val() + - + $("#selectMM").val() + - + $("#selectDD").
             $(".divAdrress").addClass("animate__animated  animate__fadeOut")
             $(".divAdrress1").css("display", "block");
             $(".divAdrress1").addClass("animate__animated  animate__fadeIn");
+            if ($("#cbx").is(":checked")) {
+                $(".txtPermaAdd1").val($(".txtCurrentAdd1").val());
+                $(".txtPermaAdd2").val($(".txtCurrentAdd2").val());
+            }
+            else if ($(this).is(":not(:checked)")) {
+                $(".txtPermaAdd1").val("");
+                $(".txtPermaAdd2").val("");
+            }
             $(".divWhite").css("top", "125px");
             step = 2;
         }

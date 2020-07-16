@@ -23,7 +23,6 @@
     }
   }
 
-
   @media only screen and (max-width: 480px) {
     .span {
       display: block !important;
@@ -138,6 +137,7 @@
       left: 13px !important;
     }
   }
+
   @media only screen and (max-width: 359px) {
     .hrLine {
       top: -13px !important;
@@ -147,7 +147,15 @@
     }
     .col {
       padding-left: 12px !important;
-    
+    }
+  }
+
+  @media only screen and (max-width: 340px) {
+    .colCircleLast, .hrLast {
+      display: none !important;
+    }
+    .rowStep {
+      padding-left: 10px !important;
     }
   }
 
@@ -617,4 +625,101 @@
     margin-left: 5px;
   }
 
- 
+  .checkbox {
+    --background: #fff;
+    --border: #D1D6EE;
+    --border-hover: #BBC1E1;
+    --border-active: #319A5A;
+    --tick: #fff;
+    position: relative;
+  }
+
+  .checkbox input, .checkbox svg {
+    width: 21px;
+    height: 21px;
+    display: block;
+  }
+
+  .checkbox input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: relative;
+    outline: none;
+    background: var(--background);
+    border: none;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 4px;
+    -webkit-transition: box-shadow .3s;
+    transition: box-shadow .3s;
+    box-shadow: inset 0 0 0 var(--s, 1px) var(--b, var(--border));
+  }
+
+  .checkbox input:hover {
+    --s: 2px;
+    --b: var(--border-hover);
+  }
+
+  .checkbox input:checked {
+    --b: var(--border-active);
+  }
+
+  .checkbox svg {
+    pointer-events: none;
+    fill: none;
+    stroke-width: 2px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: var(--stroke, var(--border-active));
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 21px;
+    height: 21px;
+    -webkit-transform: scale(var(--scale, 1)) translateZ(0);
+    transform: scale(var(--scale, 1)) translateZ(0);
+  }
+
+  .checkbox.bounce {
+    --stroke: var(--tick);
+  }
+
+  .checkbox.bounce input:checked {
+    --s: 11px;
+  }
+
+  .checkbox.bounce input:checked+svg {
+    -webkit-animation: bounce .1s linear forwards .5;
+    animation: bounce .1s linear forwards .5s;
+  }
+
+  .checkbox.bounce svg {
+    --scale: 0;
+  }
+
+  @keyframes bounce {
+    50% {
+      -webkit-transform: scale(1.2);
+      transform: scale(1.2);
+    }
+    75% {
+      -webkit-transform: scale(0.9);
+      transform: scale(0.9);
+    }
+    100% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  }
+
+  .lblYes {
+    font-family: "Proxima Bold";
+    color: #13C95C;
+    font-size: 1rem;
+    margin: 0px 10px;
+  }
+
+  .checkNo {
+    margin-left:  20px !important;
+  }

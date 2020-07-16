@@ -69,7 +69,7 @@
                         sollicitudin. In id dapibus ligula.</label>
 
                 </div>
-                <div class="col-lg-3  col-md-3 colStep colmid">
+                <div class="col-lg-3 col-md-3 colStep colmid">
                     <div class="row rowHide" style="display: none;">
                         <Div class="col-lg-12">
                             <p class="pMore1">More Information</p>
@@ -144,13 +144,13 @@
                                 <div class="circle">
 
                                 </div>
-                                <hr class="hrLine">
+                                <hr class="hrLine hrLast">
                             </div>
                         </div>
                         <div class="col-lg-9 col-md-9 col-sm-9 col-9  colStepText">
                             <p class="pSteps" onclick="functionPep()">PEP Declaration ></p>
                         </div>
-                        <div class="col-lg-3 col-md-3 col-sm-3 col">
+                        <div class="col-lg-3 col-md-3 col-sm-3 col colCircleLast">
                             <div class="divCircle" style="position: relative;">
                                 <div class="circle">
 
@@ -516,6 +516,7 @@
                                         </svg></span><span
                                         style="font-family: Proxima Regular;color: #404040;font-size: 0.9rem;">Same as
                                         current address</span></label>
+
                             </div>
                         </div>
                         <div class="row" style="margin-top: 15px;">
@@ -683,81 +684,208 @@
                     </div>
                     <div class="divFatca divForm" style="display: none;">
                         <div class="row">
-                            <div class="col-lg-12">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-6">
                                 <p class="pInfoTitle" style="margin-top: 0px;">FATCA</p>
                             </div>
-                            <div class="col-lg-6">
-                                <div class="selectdiv">
-                                    <select autocomplete="off" class="select2">
-                                        <option value="" disabled selected>Are you a US Resident?</option>
-                                        <option>No</option>
-                                        <option>Yes</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="selectdiv">
-                                    <select autocomplete="off" class="select2">
-                                        <option value="" disabled selected>Are you a US Citizen?</option>
-                                        <option>No</option>
-                                        <option>Yes</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="selectdiv">
-                                    <select autocomplete="off" class="select2">
-                                        <option value="" disabled selected>Are you a US resident alien?</option>
-                                        <option>No</option>
-                                        <option>Yes</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="selectdiv">
-                                    <select autocomplete="off" class="select2">
-                                        <option value="" disabled selected>Do you have a current US telephone
-                                            number?
-                                        </option>
-                                        <option>No</option>
-                                        <option>Yes</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="selectdiv">
-                                    <select autocomplete="off" class="select2">
-                                        <option value="" disabled selected>Were you born in US?
-                                        </option>
-                                        <option>No</option>
-                                        <option>Yes</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="selectdiv">
-                                    <select autocomplete="off" class="select2">
-                                        <option value="" disabled selected>Do you have a current US residence
-                                            address?
-                                        </option>
-                                        <option>No</option>
-                                        <option>Yes</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="selectdiv">
-                                    <select autocomplete="off" class="select2">
-                                        <option value="" disabled selected>Do you have a current US mailing address?
-                                            (including US P.O.)
-                                        </option>
-                                        <option>No</option>
-                                        <option>Yes</option>
-                                    </select>
-                                </div>
+                            <div class = "col-lg-6 col-md-6 col-sm-6 col-6 text-center">
+                                <label class = "lblYes">Yes</label>
+                                <label class = "lblYes">No</label>
                             </div>
                         </div>
-                        <div class="row" style="margin-top: 20px;">
+                        <div class="row" style="padding: 10px 10px 10px;">
+                            <div class="col-lg-8">
+                                <p class="pExpiry">Are you a US Citizen?</p>
+                            </div>
+                            <div class="col-lg-4">
+                                <label class="checkbox bounce">
+                                    <input type="checkbox">
+                                    <svg viewBox="0 0 21 21">
+                                        <polyline points="5 10.75 8.5 14.25 16 6"></polyline>
+                                    </svg>
+                                </label>
+                                <label class="checkbox bounce" >
+                                    <input type="checkbox" class = "checkNo">
+                                    <svg viewBox="0 0 21 21" style="margin-left: 20px">
+                                        <polyline points="5 10.75 8.5 14.25 16 6"></polyline>
+                                    </svg>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row" style="padding: 0px 10px 10px;">
+                            <div class="col-lg-8">
+                                <p class="pExpiry" style="margin-left: 10px;">US Resident?</p>
+                            </div>
+                            <div class="col-lg-4">
+                                <label class="checkbox bounce">
+                                    <input type="checkbox">
+                                    <svg viewBox="0 0 21 21">
+                                        <polyline points="5 10.75 8.5 14.25 16 6"></polyline>
+                                    </svg>
+                                </label>
+                                <label class="checkbox bounce" >
+                                    <input type="checkbox" class = "checkNo">
+                                    <svg viewBox="0 0 21 21" style="margin-left: 20px">
+                                        <polyline points="5 10.75 8.5 14.25 16 6"></polyline>
+                                    </svg>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row" style="padding: 0px 10px 10px;">
+                            <div class="col-lg-8">
+                                <p class="pExpiry" style="margin-left: 10px;">Are you a US resident alien?</p>
+                            </div>
+                            <div class="col-lg-4">
+                                <label class="checkbox bounce">
+                                    <input type="checkbox">
+                                    <svg viewBox="0 0 21 21">
+                                        <polyline points="5 10.75 8.5 14.25 16 6"></polyline>
+                                    </svg>
+                                </label>
+                                <label class="checkbox bounce">
+                                    <input type="checkbox" class = "checkNo">
+                                    <svg viewBox="0 0 21 21" style="margin-left: 20px">
+                                        <polyline points="5 10.75 8.5 14.25 16 6"></polyline>
+                                    </svg>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row" style="padding: 0px 10px 10px;">
+                            <div class="col-lg-8">
+                                <p class="pExpiry">Do you have current US telephone number?</p>
+                            </div>
+                            <div class="col-lg-4">
+                                <label class="checkbox bounce">
+                                    <input type="checkbox">
+                                    <svg viewBox="0 0 21 21">
+                                        <polyline points="5 10.75 8.5 14.25 16 6"></polyline>
+                                    </svg>
+                                </label>
+                                <label class="checkbox bounce">
+                                    <input type="checkbox" class = "checkNo">
+                                    <svg viewBox="0 0 21 21" style="margin-left: 20px">
+                                        <polyline points="5 10.75 8.5 14.25 16 6"></polyline>
+                                    </svg>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row" style="padding: 0px 10px 10px;">
+                            <div class="col-lg-8">
+                                <p class="pExpiry">Were you born in the US?</p>
+                            </div>
+                            <div class="col-lg-4">
+                                <label class="checkbox bounce">
+                                    <input type="checkbox">
+                                    <svg viewBox="0 0 21 21">
+                                        <polyline points="5 10.75 8.5 14.25 16 6"></polyline>
+                                    </svg>
+                                </label>
+                                <label class="checkbox bounce">
+                                    <input type="checkbox" class = "checkNo">
+                                    <svg viewBox="0 0 21 21" style="margin-left: 20px">
+                                        <polyline points="5 10.75 8.5 14.25 16 6"></polyline>
+                                    </svg>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row" style="padding: 0px 10px 10px;">
+                            <div class="col-lg-8">
+                                <p class="pExpiry">Do you have current US residence address?</p>
+                            </div>
+                            <div class="col-lg-4">
+                                <label class="checkbox bounce">
+                                    <input type="checkbox">
+                                    <svg viewBox="0 0 21 21">
+                                        <polyline points="5 10.75 8.5 14.25 16 6"></polyline>
+                                    </svg>
+                                </label>
+                                <label class="checkbox bounce">
+                                    <input type="checkbox" class = "checkNo">
+                                    <svg viewBox="0 0 21 21" style="margin-left: 20px">
+                                        <polyline points="5 10.75 8.5 14.25 16 6"></polyline>
+                                    </svg>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row" style="padding: 0px 10px 10px;">
+                            <div class="col-lg-8">
+                                <p class="pExpiry">Do you have current US mailing address? (Including US P.O)</p>
+                            </div>
+                            <div class="col-lg-4">
+                                <label class="checkbox bounce">
+                                    <input type="checkbox">
+                                    <svg viewBox="0 0 21 21">
+                                        <polyline points="5 10.75 8.5 14.25 16 6"></polyline>
+                                    </svg>
+                                </label>
+                                <label class="checkbox bounce">
+                                    <input type="checkbox" class = "checkNo">
+                                    <svg viewBox="0 0 21 21" style="margin-left: 20px">
+                                        <polyline points="5 10.75 8.5 14.25 16 6"></polyline>
+                                    </svg>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row" style="padding: 0px 10px 10px;">
+                            <div class="col-lg-8">
+                                <p class="pExpiry">Have you issued a standing instruction to transfer funds to an
+                                    account maintained in the US?</p>
+                            </div>
+                            <div class="col-lg-4">
+                                <label class="checkbox bounce">
+                                    <input type="checkbox">
+                                    <svg viewBox="0 0 21 21">
+                                        <polyline points="5 10.75 8.5 14.25 16 6"></polyline>
+                                    </svg>
+                                </label>
+                                <label class="checkbox bounce">
+                                    <input type="checkbox" class = "checkNo">
+                                    <svg viewBox="0 0 21 21"style="margin-left: 20px">
+                                        <polyline points="5 10.75 8.5 14.25 16 6"></polyline>
+                                    </svg>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row" style="padding: 0px 10px 10px;">
+                            <div class="col-lg-8">
+                                <p class="pExpiry">Have you issued a power of Attorney or granted signatory authority to
+                                    a person with US address?</p>
+                            </div>
+                            <div class="col-lg-4">
+                                <label class="checkbox bounce">
+                                    <input type="checkbox">
+                                    <svg viewBox="0 0 21 21">
+                                        <polyline points="5 10.75 8.5 14.25 16 6"></polyline>
+                                    </svg>
+                                </label>
+                                <label class="checkbox bounce">
+                                    <input type="checkbox" class = "checkNo">
+                                    <svg viewBox="0 0 21 21" style="margin-left: 20px">
+                                        <polyline points="5 10.75 8.5 14.25 16 6"></polyline>
+                                    </svg>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row" style="padding: 0px 10px 10px;">
+                            <div class="col-lg-8">
+                                <p class="pExpiry">Have you issued a power of Attorney or granted signatory authority to
+                                    a person with US address?</p>
+                            </div>
+                            <div class="col-lg-4">
+                                <label class="checkbox bounce">
+                                    <input type="checkbox">
+                                    <svg viewBox="0 0 21 21">
+                                        <polyline points="5 10.75 8.5 14.25 16 6"></polyline>
+                                    </svg>
+                                </label>
+                                <label class="checkbox bounce">
+                                    <input type="checkbox" class = "checkNo">
+                                    <svg viewBox="0 0 21 21" style="margin-left: 20px">
+                                        <polyline points="5 10.75 8.5 14.25 16 6"></polyline>
+                                    </svg>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: 10;">
                             <div class="col-lg-6 col-md-6 col-sm-6 col-6">
                                 <input type="button" class="btnBack" value="Back">
                             </div>
@@ -813,7 +941,8 @@
                     <Div class="divCsa divForm" style="display: none;">
                         <div class="row">
                             <div class="col-lg-12" style="margin-top: 10px;">
-                                <p class="pInfoTitle" style="margin-top: 0px;margin-bottom: 15px;">Client Suitability
+                                <p class="pInfoTitle" style="margin-top: 0px;margin-bottom: 15px;">Client
+                                    Suitability
                                     Assessment</p>
                             </div>
                             <div class="col-lg-12">
@@ -989,6 +1118,9 @@
     var step = 0;
     var show = 0;
 
+    $(".checkNo").prop("checked", true);
+
+
     $('#txtMobileNumber').bind('keyup paste', function () {
         this.value = this.value.replace(/[^0-9]/g, '');
     });
@@ -1018,6 +1150,10 @@
     });
 
     function functionPersonal() {
+        $(".conContent").css("height", "82vh");
+        $(".colForm").css("padding-top", "0px");
+        $(".colForm").css("padding-bottom", "0px");
+        $('.colmid').css({ height: $(".conContent").height() + "px" });
         $(".pMore").text("Personal Information");
         $(".divAdrress").css("display", "none");
         $(".divForm").css("display", "none");
@@ -1032,6 +1168,10 @@
     }
 
     function functionAdrress() {
+        $(".conContent").css("height", "82vh");
+        $(".colForm").css("padding-top", "0px");
+        $(".colForm").css("padding-bottom", "0px");
+        $('.colmid').css({ height: $(".conContent").height() + "px" });
         $(".pMore").text("Address Information");
         $(".divForm").css("display", "none");
         $(".divAdrress1").removeClass("animate__animated  animate__fadeOut animate__fadeIn");
@@ -1053,6 +1193,9 @@
     }
 
     function functionProfessional() {
+        $(".conContent").css("height", "82vh");
+        $(".colForm").css("padding-top", "0px");
+        $(".colForm").css("padding-bottom", "0px");
         $(".pMore").text("Financial Information");
         $(".divForm").css("display", "none");
         $(".divFinancial").removeClass("animate__animated  animate__fadeOut animate__fadeIn");
@@ -1066,6 +1209,10 @@
     }
 
     function functionFatca() {
+        $(".conContent").attr("style", "background-color: white; width: 100%;border-radius: 25px;box-shadow: 5px 10px 15px #00000029;-webkit-box-shadow: 2px 2px 10px 2px rgba(0,0,0,0.19);-moz-box-shadow: 2px 2px 10px 2px rgba(0,0,0,0.19);box-shadow: 2px 2px 10px 2px rgba(0,0,0,0.19);height: auto !important;")
+        $(".colForm").css("padding-top", "20px");
+        $(".colForm").css("padding-bottom", "20px");
+
         $(".pMore").text("FATCA");
         $(".divForm").css("display", "none");
         $(".divFatca").removeClass("animate__animated  animate__fadeOut animate__fadeIn");
@@ -1075,6 +1222,7 @@
         $(".divFatca").css("display", "block");
         $(".divFatca").addClass("animate__animated  animate__fadeIn");
         $(".divWhite").css("top", "260px");
+        $('.colmid').css({ height: $(".conContent").height() + "px" });
         step = 4;
     }
 
@@ -1456,6 +1604,8 @@ var bday = $("#selectYY").val() + - + $("#selectMM").val() + - + $("#selectDD").
     });
 
 
+
+
     $(document).ready(function () {
         $(window).resize(function () {
             if ($(window).width() < 500) {
@@ -1467,6 +1617,7 @@ var bday = $("#selectYY").val() + - + $("#selectMM").val() + - + $("#selectDD").
                 $(".colStep").addClass('colmid');
                 $(".rowStep").removeClass('colmid');
             }
+
         }).resize();
     })
 

@@ -126,7 +126,7 @@
                             </div>
                         </div>
                         <div class="col-lg-9 col-md-9 col-sm-9 col-9  colStepText">
-                            <p class="pSteps" onclick="functionFatca()">FATCA ></p>
+                            <p class="pSteps" onclick="functionCsa()">CSA ></p>
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-3 col">
                             <div class="divCircle" style="position: relative;">
@@ -137,7 +137,7 @@
                             </div>
                         </div>
                         <div class="col-lg-9 col-md-9 col-sm-9 col-9  colStepText">
-                            <p class="pSteps" onclick="functionCsa()">CSA ></p>
+                            <p class="pSteps" onclick="functionPep()">PEP Declaration ></p>
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-3 col">
                             <div class="divCircle" style="position: relative;">
@@ -148,7 +148,7 @@
                             </div>
                         </div>
                         <div class="col-lg-9 col-md-9 col-sm-9 col-9  colStepText">
-                            <p class="pSteps" onclick="functionPep()">PEP Declaration ></p>
+                            <p class="pSteps" onclick="functionFatca()">FATCA ></p>
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-3 col colCircleLast">
                             <div class="divCircle" style="position: relative;">
@@ -169,7 +169,7 @@
                             <input required='' type='text' class="txtusername" id="txtfullname">
                             <label alt='Full name' placeholder='Full name'></label>
                         </form>
-                        <p class="pGuide">Name must be comma-seperated e.g "Juan, Santos, De la Cruz"</p>
+                        <p class="pGuide">Name must be comma-separated e.g "Juan, Santos, De la Cruz"</p>
                         <form>
                             <input required='' type='text' class="txtusername" style="margin-top: -10px;">
                             <label alt='Mothers maiden Name' placeholder='Mothers maiden Name'></label>
@@ -704,12 +704,12 @@
                                     </svg>
                                     <span>Yes</span>
                                 </label>
-                                <label class="checkbox bounce"> 
-                                    <input type="checkbox" class="checkNo"> 
+                                <label class="checkbox bounce">
+                                    <input type="checkbox" class="checkNo">
                                     <svg viewBox="0 0 21 21" style="margin-left: 20px">
                                         <polyline points="5 10.75 8.5 14.25 16 6"></polyline>
                                     </svg>
-                                   <Span>no</Span>
+                                    <Span>no</Span>
                                 </label>
                             </div>
                         </div>
@@ -1198,35 +1198,44 @@
         $(".divFinancial").addClass("animate__animated  animate__fadeOut")
         $(".divFatca").css("display", "block");
         $(".divFatca").addClass("animate__animated  animate__fadeIn");
-        $(".divWhite").css("top", "260px");
+        $(".divWhite").css("top", "400px");
         $('.colmid').css({ height: $(".conContent").height() + "px" });
-        step = 4;
-    }
-
-    function functionCsa() {
-        $(".pMore").text("Client Suitability Assessment");
-        $(".divForm").css("display", "none");
-        $(".divCsa").removeClass("animate__animated  animate__fadeOut animate__fadeIn");
-        $(".divCsa").removeClass("animate__animated  animate__fadeOut animate__fadeIn");
-        $(".divFatca1").css("display", "none");
-        $(".divFatca1").addClass("animate__animated  animate__fadeOut")
-        $(".divCsa").css("display", "block");
-        $(".divCsa").addClass("animate__animated  animate__fadeIn");
-        $(".divWhite").css("top", "360px");
         step = 6;
     }
 
+    function functionCsa() {
+        $(".conContent").css("height", "82vh");
+        $(".colForm").css("padding-top", "0px");
+        $(".colForm").css("padding-bottom", "0px");
+        $('.colmid').css({ height: $(".conContent").height() + "px" });
+
+        $(".pMore").text("CSA");
+        $(".divCsa").removeClass("animate__animated  animate__fadeOut animate__fadeIn");
+        $(".divCsa").removeClass("animate__animated  animate__fadeOut animate__fadeIn");
+        $(".divForm").css("display", "none");
+        $(".divFinancial").css("display", "none");
+        $(".divFinancial").addClass("animate__animated  animate__fadeOut")
+        $(".divCsa").css("display", "block");
+        $(".divCsa").addClass("animate__animated  animate__fadeIn");
+        $(".divWhite").css("top", "265px");
+        step = 4;
+    }
+
     function functionPep() {
+        $(".conContent").css("height", "82vh");
+        $(".colForm").css("padding-top", "0px");
+        $(".colForm").css("padding-bottom", "0px");
+        $('.colmid').css({ height: $(".conContent").height() + "px" });
         $(".pMore").text("PEP Declaration");
         $(".divForm").css("display", "none");
-        $(".divPep").removeClass("animate__animated  animate__fadeOut animate__fadeIn");
-        $(".divCsa").removeClass("animate__animated  animate__fadeOut animate__fadeIn");
         $(".divCsa").css("display", "none");
+        $(".divCsa").removeClass("animate__fadeOut")
         $(".divCsa").addClass("animate__animated  animate__fadeOut")
         $(".divPep").css("display", "block");
+        $(".divPep").removeClass("animate__fadeOut")
         $(".divPep").addClass("animate__animated  animate__fadeIn");
-        $(".divWhite").css("top", "400px");
-        step = 7;
+        $(".divWhite").css("top", "330px");
+        step = 5;
     }
 
     function functionSettlement() {
@@ -1240,7 +1249,7 @@
         $(".divSettlement").addClass("animate__animated  animate__fadeIn");
         $(".divWhite").css("top", "470px");
         $("#txtAccountname").val($("#txtfullname").val());
-        step = 8;
+        step = 7;
     }
 
 
@@ -1326,7 +1335,7 @@
 
     $('input[type="checkbox"]').click(function () {
         $(this).parents().eq(2).find('input[type="checkbox"]').not(this).prop("checked", false);
-        
+
     });
 
     function addHyphenPagibig(element) {
@@ -1362,17 +1371,41 @@
 
     $(".btnBack").click(function () {
         if (step === 7) {
-            $(".pMore").text("PEP Declaration");
+            $(".conContent").attr("style", "background-color: white; width: 100%;border-radius: 25px;box-shadow: 5px 10px 15px #00000029;-webkit-box-shadow: 2px 2px 10px 2px rgba(0,0,0,0.19);-moz-box-shadow: 2px 2px 10px 2px rgba(0,0,0,0.19);box-shadow: 2px 2px 10px 2px rgba(0,0,0,0.19);height: auto !important;")
+            $(".colForm").css("padding-top", "20px");
+            $(".colForm").css("padding-bottom", "20px");
+            $(".pMore").text("FATCA");
             $(".divSettlement").css("display", "none");
             $(".divSettlement").removeClass("animate__fadeOut")
             $(".divSettlement").addClass("animate__animated  animate__fadeOut")
-            $(".divPep").css("display", "block");
-            $(".divPep").removeClass("animate__fadeOut")
-            $(".divPep").addClass("animate__animated  animate__fadeIn");
+            $(".divSettlement").addClass("animate__animated  animate__fadeOut")
+            $(".divFatca").css("display", "block");
+            $(".divFatca").removeClass("animate__fadeOut")
+            $(".divFatca").addClass("animate__animated  animate__fadeIn");
+            $('.colmid').css({ height: $(".conContent").height() + "px" });
             $(".divWhite").css("top", "400px");
             step = 6;
         }
         else if (step === 6) {
+            $(".conContent").css("height", "82vh");
+            $(".colForm").css("padding-top", "0px");
+            $(".colForm").css("padding-bottom", "0px");
+            $('.colmid').css({ height: $(".conContent").height() + "px" });
+            $(".pMore").text("PEP Declaration");
+            $(".divFatca").css("display", "none");
+            $(".divFatca").removeClass("animate__fadeOut")
+            $(".divFatca").addClass("animate__animated  animate__fadeOut")
+            $(".divPep").css("display", "block");
+            $(".divPep").removeClass("animate__fadeOut")
+            $(".divPep").addClass("animate__animated  animate__fadeIn");
+            $(".divWhite").css("top", "330px");
+            step = 5;
+        }
+        else if (step === 5) {
+            $(".conContent").css("height", "82vh");
+            $(".colForm").css("padding-top", "0px");
+            $(".colForm").css("padding-bottom", "0px");
+            $('.colmid').css({ height: $(".conContent").height() + "px" });
             $(".pMore").text("CSA");
             $(".divPep").css("display", "none");
             $(".divPep").removeClass("animate__fadeOut")
@@ -1380,22 +1413,7 @@
             $(".divCsa").css("display", "block");
             $(".divCsa").removeClass("animate__fadeOut")
             $(".divCsa").addClass("animate__animated  animate__fadeIn");
-            $(".divWhite").css("top", "330px");
-            step = 5;
-        }
-        else if (step === 5) {
-            $(".conContent").attr("style", "background-color: white; width: 100%;border-radius: 25px;box-shadow: 5px 10px 15px #00000029;-webkit-box-shadow: 2px 2px 10px 2px rgba(0,0,0,0.19);-moz-box-shadow: 2px 2px 10px 2px rgba(0,0,0,0.19);box-shadow: 2px 2px 10px 2px rgba(0,0,0,0.19);height: auto !important;")
-            $(".colForm").css("padding-top", "20px");
-            $(".colForm").css("padding-bottom", "20px");
-            $(".pMore").text("FATCA");
-            $(".divCsa").css("display", "none");
-            $(".divCsa").removeClass("animate__fadeOut")
-            $(".divCsa").addClass("animate__animated  animate__fadeOut")
-            $(".divCsa").addClass("animate__animated  animate__fadeOut")
-            $(".divFatca").css("display", "block");
-            $(".divFatca").removeClass("animate__fadeOut")
-            $(".divFatca").addClass("animate__animated  animate__fadeIn");
-            $('.colmid').css({ height: $(".conContent").height() + "px" });
+            $(".divWhite").css("top", "260px");
             step = 4;
         }
         else if (step === 4) {
@@ -1404,10 +1422,10 @@
             $(".colForm").css("padding-bottom", "0px");
             $('.colmid').css({ height: $(".conContent").height() + "px" });
             $(".pMore").text("Financial Profile");
-            $(".divFatca").css("display", "none");
-            $(".divFatca").removeClass("animate__fadeOut")
-            $(".divFatca").addClass("animate__animated  animate__fadeOut")
-            $(".divFatca").addClass("animate__animated  animate__fadeOut")
+            $(".divCsa").css("display", "none");
+            $(".divCsa").removeClass("animate__fadeOut")
+            $(".divCsa").addClass("animate__animated  animate__fadeOut")
+            $(".divCsa").addClass("animate__animated  animate__fadeOut")
             $(".divFinancial").css("display", "block");
             $(".divFinancial").removeClass("animate__fadeOut")
             $(".divFinancial").addClass("animate__animated  animate__fadeIn");
@@ -1541,21 +1559,24 @@ var bday = $("#selectYY").val() + - + $("#selectMM").val() + - + $("#selectDD").
             step = 3;
         }
         else if (step === 3) {
-            $(".conContent").attr("style", "background-color: white; width: 100%;border-radius: 25px;box-shadow: 5px 10px 15px #00000029;-webkit-box-shadow: 2px 2px 10px 2px rgba(0,0,0,0.19);-moz-box-shadow: 2px 2px 10px 2px rgba(0,0,0,0.19);box-shadow: 2px 2px 10px 2px rgba(0,0,0,0.19);height: auto !important;")
-            $(".colForm").css("padding-top", "20px");
-            $(".colForm").css("padding-bottom", "20px");
-            $(".pMore").text("FATCA");
-            $(".divFatca").removeClass("animate__animated  animate__fadeOut animate__fadeIn");
-            $(".divFatca").removeClass("animate__animated  animate__fadeOut animate__fadeIn");
-            $(".divFinancial").css("display", "none");
-            $(".divFinancial").addClass("animate__animated  animate__fadeOut")
-            $(".divFatca").css("display", "block");
-            $(".divFatca").addClass("animate__animated  animate__fadeIn");
-            $(".divWhite").css("top", "260px");
-            $('.colmid').css({ height: $(".conContent").height() + "px" });
-            step = 4;
-        }
-        else if (step === 4) {
+            /*
+    
+                    $(".conContent").attr("style", "background-color: white; width: 100%;border-radius: 25px;box-shadow: 5px 10px 15px #00000029;-webkit-box-shadow: 2px 2px 10px 2px rgba(0,0,0,0.19);-moz-box-shadow: 2px 2px 10px 2px rgba(0,0,0,0.19);box-shadow: 2px 2px 10px 2px rgba(0,0,0,0.19);height: auto !important;")
+                $(".colForm").css("padding-top", "20px");
+                $(".colForm").css("padding-bottom", "20px");
+                $(".pMore").text("FATCA");
+                $(".divFatca").removeClass("animate__animated  animate__fadeOut animate__fadeIn");
+                $(".divFatca").removeClass("animate__animated  animate__fadeOut animate__fadeIn");
+                $(".divFinancial").css("display", "none");
+                $(".divFinancial").addClass("animate__animated  animate__fadeOut")
+                $(".divFatca").css("display", "block");
+                $(".divFatca").addClass("animate__animated  animate__fadeIn");
+                $(".divWhite").css("top", "260px");
+                $('.colmid').css({ height: $(".conContent").height() + "px" });
+                step = 4;
+    
+            */
+
 
             $(".conContent").css("height", "82vh");
             $(".colForm").css("padding-top", "0px");
@@ -1565,14 +1586,14 @@ var bday = $("#selectYY").val() + - + $("#selectMM").val() + - + $("#selectDD").
             $(".pMore").text("CSA");
             $(".divCsa").removeClass("animate__animated  animate__fadeOut animate__fadeIn");
             $(".divCsa").removeClass("animate__animated  animate__fadeOut animate__fadeIn");
-            $(".divFatca").css("display", "none");
-            $(".divFatca").addClass("animate__animated  animate__fadeOut")
+            $(".divFinancial").css("display", "none");
+            $(".divFinancial").addClass("animate__animated  animate__fadeOut")
             $(".divCsa").css("display", "block");
             $(".divCsa").addClass("animate__animated  animate__fadeIn");
-            $(".divWhite").css("top", "330px");
-            step = 5;
+            $(".divWhite").css("top", "265px");
+            step = 4;
         }
-        else if (step === 5) {
+        else if (step === 4) {
 
             $(".pMore").text("PEP Declaration");
             $(".divPep").removeClass("animate__animated  animate__fadeOut animate__fadeIn");
@@ -1581,15 +1602,31 @@ var bday = $("#selectYY").val() + - + $("#selectMM").val() + - + $("#selectDD").
             $(".divCsa").addClass("animate__animated  animate__fadeOut")
             $(".divPep").css("display", "block");
             $(".divPep").addClass("animate__animated  animate__fadeIn");
+            $(".divWhite").css("top", "335px");
+            step = 5;
+
+        }
+        else if (step === 5) {
+            $(".conContent").attr("style", "background-color: white; width: 100%;border-radius: 25px;box-shadow: 5px 10px 15px #00000029;-webkit-box-shadow: 2px 2px 10px 2px rgba(0,0,0,0.19);-moz-box-shadow: 2px 2px 10px 2px rgba(0,0,0,0.19);box-shadow: 2px 2px 10px 2px rgba(0,0,0,0.19);height: auto !important;")
+            $(".colForm").css("padding-top", "20px");
+            $(".colForm").css("padding-bottom", "20px");
+            $(".pMore").text("FATCA");
+            $(".divFatca").removeClass("animate__animated  animate__fadeOut animate__fadeIn");
+            $(".divFatca").removeClass("animate__animated  animate__fadeOut animate__fadeIn");
+            $(".divPep").css("display", "none");
+            $(".divPep").addClass("animate__animated  animate__fadeOut")
+            $(".divFatca").css("display", "block");
+            $(".divFatca").addClass("animate__animated  animate__fadeIn");
             $(".divWhite").css("top", "400px");
+            $('.colmid').css({ height: $(".conContent").height() + "px" });
             step = 6;
         }
         else if (step === 6) {
             $(".pMore").text("Settlement Information");
             $(".divSettlement").removeClass("animate__animated  animate__fadeOut animate__fadeIn");
             $(".divSettlement").removeClass("animate__animated  animate__fadeOut animate__fadeIn");
-            $(".divPep").css("display", "none");
-            $(".divPep").addClass("animate__animated  animate__fadeOut")
+            $(".divFatca").css("display", "none");
+            $(".divFatca").addClass("animate__animated  animate__fadeOut")
             $(".divSettlement").css("display", "block");
             $(".divSettlement").addClass("animate__animated  animate__fadeIn");
             $(".divWhite").css("top", "470px");

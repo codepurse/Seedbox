@@ -365,19 +365,39 @@
                         <div class="col-lg-12" style="margin-top:15px;">
                             <p class="pGuide" style="margin-left: -5px;">Your age must be 18yrs old above</p>
                         </div>
-                        <form style="margin-top: 5px;">
-                            <div class="selectdiv" style="margin-top:0px;">
-                                <select autocomplete="off" class="select2">
-                                    <option value="" disabled selected>Birthplace
-                                    </option>
-                                </select>
+                        <div class="row" style="margin-top:-10px;">
+                            <div class="col-lg-12">
+                                <form style="margin-top: 5px;">
+                                    <div class="selectdiv" style="margin-top:0px;">
+                                        <select autocomplete="off" class="select2">
+                                            <option value="" disabled selected>Birthplace
+                                            </option>
+                                        </select>
+                                    </div>
+                                </form>
                             </div>
-                        </form>
-                        <form style="margin-top: 65px !important;">
-                            <input required='' type='text' class="txtusername">
-                            <label alt='Citizenship' placeholder='Citizenship'></label>
-                        </form>
-                        <div class="row">
+                        </div>
+                        <div class="row" style="margin-top: 5px;">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                                <form>
+                                    <input required='' type='text' class="txtusername">
+                                    <label alt='Citizenship' placeholder='Citizenship'></label>
+                                </form>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="selectdiv" style="margin-top:0px;">
+                                    <select autocomplete="off" class="select2">
+                                        <option value="" disabled selected>Civil Status
+                                        </option>
+                                        <option>Single</option>
+                                        <option>Married</option>
+                                        <option>Divorced/Separated</option>
+                                        <option>Widowed</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top:-10px;">
                             <div class="col-lg-6 col-md-6 col-sm-6 col-6">
                                 <form>
                                     <input required='' type='text' class="txtusername" id="txtTin">
@@ -665,6 +685,19 @@
                                 </div>
                             </div>
                             <div class="col-lg-12">
+                                <div class="selectdiv" style="margin-top: 10px;">
+                                    <select autocomplete="off" class="select2">
+                                        <option value="" disabled selected>Name of Work</option>
+                                        <option>
+                                            Student</option>
+                                        <option>Private sector employee</option>
+                                        <option>Self-employed</option>
+                                        <option>Goverment employee</option>
+                                        <option>OFW</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
                                 <div class="selectdiv" style="margin-top: 8px;">
                                     <select autocomplete="off" class="select2">
                                         <option value="" disabled selected>Are you director/officer/shareholder?
@@ -820,7 +853,7 @@
                         </div>
                         <div class="row" style="padding: 0px 10px 10px;margin-top: -10px;">
                             <div class="col-lg-8">
-                                <p class="pExpiry">Do you have current US mailing address? (Including US P.O)</p>
+                                <p class="pExpiry">Do you have current US mailing address? (Including US P.O.)</p>
                             </div>
                             <div class="col-lg-4">
                                 <label class="checkbox bounce">
@@ -885,8 +918,11 @@
                         </div>
                         <div class="row" style="padding: 0px 10px 10px;margin-top: -10px;">
                             <div class="col-lg-8">
-                                <p class="pExpiry">Have you issued a power of Attorney or granted signatory authority to
-                                    a person with US address?</p>
+                                <p class="pExpiry">Do you have “in care of” address or
+                                    “hold
+                                    mail” address that is the sole address for an account (whether such
+                                    address
+                                    in the US or outside the US)?</p>
                             </div>
                             <div class="col-lg-4">
                                 <label class="checkbox bounce">

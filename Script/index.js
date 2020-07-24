@@ -1,5 +1,37 @@
 var step = 0; // variable that will handle what form is the user is.
 
+function moreLess(initiallyVisibleCharacters) {
+  var visibleCharacters = initiallyVisibleCharacters;
+  var paragraph = $(".text");
+
+  paragraph.each(function () {
+    var text = $(this).text();
+    var wholeText =
+      text.slice(0, visibleCharacters) +
+      "<span class='ellipsis'>... </span><a href='#' class='more'>MORE<i class='fa fa-arrow-circle-o-down' aria-hidden='true'></i></a>" +
+      "<span style='display:none'>" +
+      text.slice(visibleCharacters, text.length) +
+      "<a href='#' class='less'> LESS<i class='fa fa-arrow-circle-o-up' aria-hidden='true'></i></a></span>";
+
+    if (text.length < visibleCharacters) {
+      return;
+    } else {
+      $(this).html(wholeText);
+    }
+  });
+  $(".more").click(function (e) {
+    e.preventDefault();
+    $(this).hide().prev().hide();
+    $(this).next().show();
+  });
+  $(".less").click(function (e) {
+    e.preventDefault();
+    $(this).parent().hide().prev().show().prev().show();
+  });
+}
+
+moreLess(70);
+
 $("input:checkbox").prop("checked", false); // All checkbox in fatca will be uncheck so the default value will be no.
 $(".checkNo").prop("checked", true); // All checkbox that are in no section will be check.
 $(".checkNo:checked").attr("style", "--b: gray;"); // All checkbox that are in no section will be grayed.
@@ -333,7 +365,6 @@ $(".select2").select2({
   minimumResultsForSearch: -1,
 });
 
-
 // Click function for back button
 $(".btnBack").click(function () {
   if (step === 7) {
@@ -618,7 +649,6 @@ var bday = $("#selectYY").val() + - + $("#selectMM").val() + - + $("#selectDD").
   }
 });
 
-
 // Added function for resize windows
 $(document).ready(function () {
   $(window)
@@ -635,7 +665,6 @@ $(document).ready(function () {
     })
     .resize();
 });
-
 
 // Added blur effect when the navbar is opened
 function openNav() {

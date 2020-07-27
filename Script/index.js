@@ -228,10 +228,10 @@ function functionSettlement() {
   $(".divPe   p").addClass("animate__animated  animate__fadeOut");
   $(".divSettlement").css("display", "block");
   $(".divSettlement").addClass("animate__animated  animate__fadeIn");
-  $(".divWhite").css("top", "470px");
+  $(".divWhite").css("top", "540px");
   $("#txtAccountname").val($("#txtfullname").val());
 
-  step = 6;
+  step = 7;
 }
 
 function functionUpload() {
@@ -250,7 +250,7 @@ function functionUpload() {
   $(".divSettlement").css("display", "none");
   $(".divUpload").css("display", "block");
   $(".divUpload").addClass("animate__animated  animate__fadeIn");
-  $(".divWhite").css("top", "540px");
+  $(".divWhite").css("top", "470px");
   step = 7;
 }
 
@@ -372,13 +372,13 @@ $(".btnBack").click(function () {
     $(".colForm").css("padding-top", "0px");
     $(".colForm").css("padding-bottom", "0px");
     $(".colmid").css({ height: $(".conContent").height() + "px" });
-    $(".pMore").text("Settlement Information");
-    $(".divUpload").css("display", "none");
-    $(".divUpload").removeClass("animate__fadeOut");
-    $(".divUpload").addClass("animate__animated  animate__fadeOut");
-    $(".divSettlement").css("display", "block");
+    $(".pMore").text("Upload Documents");
+    $(".divSettlement").css("display", "none");
     $(".divSettlement").removeClass("animate__fadeOut");
-    $(".divSettlement").addClass("animate__animated  animate__fadeIn");
+    $(".divSettlement").addClass("animate__animated  animate__fadeOut");
+    $(".divUpload").css("display", "block");
+    $(".divUpload").removeClass("animate__fadeOut");
+    $(".divUpload").addClass("animate__animated  animate__fadeIn");
     $(".divWhite").css("top", "470px");
     step = 6;
   } else if (step === 6) {
@@ -389,10 +389,10 @@ $(".btnBack").click(function () {
     $(".colForm").css("padding-top", "20px");
     $(".colForm").css("padding-bottom", "20px");
     $(".pMore").text("FATCA");
-    $(".divSettlement").css("display", "none");
-    $(".divSettlement").removeClass("animate__fadeOut");
-    $(".divSettlement").addClass("animate__animated  animate__fadeOut");
-    $(".divSettlement").addClass("animate__animated  animate__fadeOut");
+    $(".divUpload").css("display", "none");
+    $(".divUpload").removeClass("animate__fadeOut");
+    $(".divUpload").addClass("animate__animated  animate__fadeOut");
+    $(".divUpload").addClass("animate__animated  animate__fadeOut");
     $(".divFatca").css("display", "block");
     $(".divFatca").removeClass("animate__fadeOut");
     $(".divFatca").addClass("animate__animated  animate__fadeIn");
@@ -619,20 +619,6 @@ var bday = $("#selectYY").val() + - + $("#selectMM").val() + - + $("#selectDD").
     $(".colmid").css({ height: $(".conContent").height() + "px" });
     step = 5;
   } else if (step === 5) {
-    $(".pMore").text("Settlement Information");
-    $(".divSettlement").removeClass(
-      "animate__animated  animate__fadeOut animate__fadeIn"
-    );
-    $(".divSettlement").removeClass(
-      "animate__animated  animate__fadeOut animate__fadeIn"
-    );
-    $(".divFatca").css("display", "none");
-    $(".divFatca").addClass("animate__animated  animate__fadeOut");
-    $(".divSettlement").css("display", "block");
-    $(".divSettlement").addClass("animate__animated  animate__fadeIn");
-    $(".divWhite").css("top", "470px");
-    step = 6;
-  } else if (step === 6) {
     $(".pMore").text("Upload Documents");
     $(".divUpload").removeClass(
       "animate__animated  animate__fadeOut animate__fadeIn"
@@ -640,10 +626,25 @@ var bday = $("#selectYY").val() + - + $("#selectMM").val() + - + $("#selectDD").
     $(".divUpload").removeClass(
       "animate__animated  animate__fadeOut animate__fadeIn"
     );
-    $(".divSettlement").css("display", "none");
-    $(".divSettlement").addClass("animate__animated  animate__fadeOut");
+    $(".divFatca").css("display", "none");
+    $(".divFatca").addClass("animate__animated  animate__fadeOut");
     $(".divUpload").css("display", "block");
     $(".divUpload").addClass("animate__animated  animate__fadeIn");
+    $(".divWhite").css("top", "470px");
+    step = 6;
+  } else if (step === 6) {
+
+    $(".pMore").text("Settlement Information");
+    $(".divSettlement").removeClass(
+      "animate__animated  animate__fadeOut animate__fadeIn"
+    );
+    $(".divSettlement").removeClass(
+      "animate__animated  animate__fadeOut animate__fadeIn"
+    );
+    $(".divUpload").css("display", "none");
+    $(".divUpload").addClass("animate__animated  animate__fadeOut");
+    $(".divSettlement").css("display", "block");
+    $(".divSettlement").addClass("animate__animated  animate__fadeIn");
     $(".divWhite").css("top", "540px");
     step = 7;
   }
